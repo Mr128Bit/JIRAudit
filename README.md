@@ -137,11 +137,7 @@ JIRAudit is a research tool intended for security auditing purposes. The creator
 
 ## :balance_scale: License
 
-This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE.md) file for details.
-
-## :handshake: Contributing
-
-Contributions are welcome! Please review our [CONTRIBUTING](CONTRIBUTING.md) guidelines to learn how you can contribute to this project.
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
 
 ## :question: Support
 
