@@ -1,8 +1,12 @@
-
 # JIRAudit :mag_right:
- [![Apache v2 License](https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg)](https://github.com/Mr128Bit/JIRAudit/blob/devel/LICENSE.md)
 
-![JIRAudit Logo](logo.png)
+<p align="center">
+  <a href="https://github.com/Mr128Bit/JIRAudit/blob/devel/LICENSE.md"><img src="https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg"></a>
+</p>
+<p align="center">
+
+  <img src="logo.png">
+</p>
 
 JIRAudit is a powerful and sophisticated security audit tool designed for Jira Data Center and Server environments. Written in Python, it helps in identifying security vulnerabilities, enumerates plugins and users without authentication, and assesses system configurations to ensure optimal security.
 
