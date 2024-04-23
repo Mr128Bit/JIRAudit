@@ -18,8 +18,8 @@ from misc.Color import Color
 from jira_api.marketplace_api.Plugin import *  # pylint: disable=unused-wildcard-import wildcard-import
 from jira_api.JiraAPI import JiraRequestException
 from cve_utils.cve_utils import *  # pylint: disable=unused-wildcard-import wildcard-import
-from PluginManager import PluginManager
 
+from PluginManager import PluginManager
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
