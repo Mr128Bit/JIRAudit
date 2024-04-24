@@ -30,6 +30,7 @@ class Plugin:
         )
 
         self.session.mount("https://", HTTPAdapter(max_retries=retries))
+        self.session.mount("http://", HTTPAdapter(max_retries=retries))
 
         if self.is_marketplace_app:
             resp = None

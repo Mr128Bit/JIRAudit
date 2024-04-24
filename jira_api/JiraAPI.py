@@ -82,6 +82,7 @@ class JiraAPI:  # pylint: disable=too-many-public-methods too-many-instance-attr
         LOGIN = "/login.jsp"
         QUERYCOMPONENT = "/secure/QueryComponent!Default.jspa"
         USERBROWSER = "/secure/admin/user/UserBrowser.jspa"
+        FILTERS = "/secure/ManageFilters.jspa"
 
     class DATABASE(Enum):
         """
@@ -149,6 +150,7 @@ class JiraAPI:  # pylint: disable=too-many-public-methods too-many-instance-attr
         )
 
         self.SESSION.mount("https://", HTTPAdapter(max_retries=retries))
+        self.SESSION.mount("http://", HTTPAdapter(max_retries=retries))
 
     @property
     def authenticated(self):
@@ -347,7 +349,7 @@ class JiraAPI:  # pylint: disable=too-many-public-methods too-many-instance-attr
 
         return service_desk_version
 
-    """
+    """ # pylint: disable=pointless-string-statement
     # not ready yet
     def get_users_failed_logins_test(self):
 
@@ -594,17 +596,18 @@ class JiraAPI:  # pylint: disable=too-many-public-methods too-many-instance-attr
 
     def get_dashboards_unauthenticated(self) -> list:
         """
-        List dashboards unauthenticated if the endpoint is not secured
+        Gets dashboards that are public for anonymous users 
 
         Returns
         -------
             result : list
-                A list containing all dashboards
-        """
-        result = []
+                A list of dashboards and their ids and urls
 
+        """
+
+        result = []
         try:
-            response = requests.get(f"{self.BASE_URL}{self.WEB_ENDPOINTS}", timeout=10)
+            response = requests.get(f"{self.BASE_URL}{self.API_ENDPOINTS.DASHBOARDS.value}", timeout=10)
             if response.status_code == 200:
                 response = response.json()
 
@@ -646,6 +649,38 @@ class JiraAPI:  # pylint: disable=too-many-public-methods too-many-instance-attr
             raise JiraRequestException(message=f"Request thorw an exception {e}") from e
 
         return result
+
+    def get_filters_unauthenticated(self):
+        """
+        List dashboards unauthenticated if the endpoint is not secured
+
+        Returns
+        -------
+            result : list
+                A list containing all dashboards
+        """
+
+        filters = []
+        response = None
+
+        try:
+            response = requests.get(f"{self.BASE_URL}{self.WEB_ENDPOINTS.FILTERS.value}?filterView=popular", timeout=10)
+        except Exception as e:
+            raise JiraRequestException(message=f"Request thorw an exception {e}") from e
+
+        html = etree.HTML(response.text)
+
+        elements = html.xpath("//table[@id='mf_popular']//a[starts-with(@id, 'filterlink_')]")
+
+        for element in elements:
+            name = element.text
+            href = element.get("href")
+            fid = href.split("?")[-1].split("=")[-1]
+
+            filters.append((name, fid))
+
+
+        return filters
 
     def get_database_info(self) -> dict:
         """

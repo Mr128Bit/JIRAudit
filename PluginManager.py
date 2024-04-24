@@ -1,20 +1,33 @@
-from pathlib import Path
+"""
+This module is used for managing and enumerating atlassian jira marketplace plugins
+
+Author:     Mr128Bit
+Created:    04/24
+
+
+"""
 
 import requests
-from lxml import etree
 import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 class PluginManager:
+    """
+    This is the plugin manager class for managing marketplace plugins
 
+    TODO: Add import for plugins
+    """
     def __init__(self, base_url, config: dict, silent_mode=False):
         self.PLUGINS_CONFIG = config
         self.BASE_URL = base_url
         self.SILENT_MODE = silent_mode
 
     class PluginEnumerationException(Exception):
+        """
+        This exception is thrown when an error occured while enumerating plugins
+        """
         def __init__(
             self, message="Plugin enumeration failed (request error)", errors=None
         ):
@@ -22,10 +35,13 @@ class PluginManager:
             self.errors = errors
 
     class PluginImportException(Exception):
+        """
+        This exception is thrown when an error occured while importing plugins (currently unused)
+        """
         def __init__(self, message="Plugin import failed (request error)", errors=None):
             super().__init__(message)
             self.errors = errors
-    
+
     def _print_msg(self, *args, **kwargs):
         """
         Prints a message if silent mode isn't set
@@ -61,7 +77,7 @@ class PluginManager:
                 f"\n\033[96m[PLUGIN]\033[00m {name}\nVersion: \033[91mUnknown\033[00m\nVendor: \033[91mUnknown\033[00m"
             )
 
-    def enum_plugins_unauthenticated(self) -> list:
+    def enum_plugins_unauthenticated(self) -> list: # pylint: disable=too-many-locals
         """
         Enumerates all plugins, but unauthenticated
         # TODO: code überarbeiten, exception handling überarbeiten
@@ -74,15 +90,15 @@ class PluginManager:
         s_endpoints = [v for x, v in endpoints.items() if v.get("urls")]
         count = len(s_endpoints)
         plugins_found = []
-
-        try:
+        # this is messy i know, i'll change later
+        try: # pylint: disable=too-many-nested-blocks
             self._print_msg("\n\033[97m", "_" * 20, "[Plugin-Enum]", "_" * 20, "\033[00m\n")
             self._print_msg(
                 "\n\033[93mI will now try to enumerate the plugins without being authenticated...\033[00m\n"
             )
 
             i = 0
-            for plugin, meta in endpoints.items():
+            for plugin, meta in endpoints.items(): # pylint: disable=unused-variable
                 if meta.get("urls"):
                     i += 1
 
@@ -121,7 +137,7 @@ class PluginManager:
                 update_status(f"Scanned {i} / {count} plugins")
 
         except Exception as e:
-            raise
+            raise self.PluginEnumerationException from e
 
         self._print_msg("\n\033[91m", "_" * 55, "\033[00m\n")
 
