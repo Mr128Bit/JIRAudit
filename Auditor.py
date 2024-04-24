@@ -225,7 +225,9 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         fpath = self.RESULTS_PATH / fname
 
         try:
-
+            # create results path if not exist
+            if not os.path.isdir(self.RESULTS_PATH):
+                os.makedirs(self.RESULTS_PATH)
             with open(fpath, "w", encoding="UTF-8") as f:
                 json.dump(self.RESULT, f, indent=4, ensure_ascii=False)
 
