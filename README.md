@@ -10,6 +10,8 @@
 
 JIRAudit is a powerful and sophisticated security audit tool designed for Jira Data Center and Server environments. Written in Python, it helps in identifying security vulnerabilities, enumerates plugins and users without authentication, and assesses system configurations to ensure optimal security.
 
+ATTENTION: This is an alpha version; Use at your own risk!
+
 ## Features
 
 - **Security Risk Assessment:** Scan and evaluate Jira Data Center and Server instances for potential security threats.
@@ -48,9 +50,7 @@ Command Overview
 ```
 JIRAudit - Jira auditing tool
 
-usage: JIRAudit - Jira auditing tool [-h] [-p PROXY] [-t TOKEN] [-u USERNAME] [-pw PASSWORD] [-f] [-fua] [-fa] [-d] [-pe]
-                                     [-vc] [-epat] [-cs] [-upe] [-uise] [-uue <USERLIST>] [-s] [-o OUT] [-sm]
-                                     host
+usage: JIRAudit - Jira auditing tool [-h] [-p PROXY] [-t TOKEN] [-u USERNAME] [-pw PASSWORD] [-f] [-fua] [-fa] [-d] [-pe] [-vc] [-epat] [-cs] [-upe] [-uise] [-uue <USERLIST>] [-ce] [-s] [-o OUT] [-sm] host
 
 Scan your jira instance and get feedback on your configuration
 
@@ -82,6 +82,8 @@ options:
                         Start a issue status enumeration (unauthenticated)
   -uue <USERLIST>, --unauth-user-enum <USERLIST>
                         Start an unauthenticated user enumeration
+  -ce, --check-exposed-endpoints
+                        Check several endpoints for exposed sensitive data and enumerate if possible
   -s, --save            Save the results as a json file
   -o OUT, --out OUT     Output path for result file
   -sm, --silent-mode    If run in silent mode, only the execution ID and error logs will be printed
@@ -133,7 +135,41 @@ python jiraudit.py --help
 
 ## :gear: Configuration / Templates
 
-Customize your scans by creating a new template file in the templates/ folder. Sample configurations and options are provided within the file 'general.py'.
+To create a template for a host in your tool, follow these steps:
+
+- **Copy the Configuration File**: The example configuration file **general.py** contains general settings that apply to all hosts. Copy this file and adjust it as needed.
+
+- **Customize the HOSTS Variable**: The HOSTS variable can be populated with any number of hosts. If a host is explicitly listed in a configuration file, that configuration will be used when the host is checked.
+
+- **Configure Authentication Options**: You can configure various authentication options in your template, such as JIRA_USER and JIRA_PASSWORD. Uncomment and modify these as needed.
+
+- **Adjust Scoring Configuration**: Modify the scoring parameters for personal access tokens (PATs) with or without an expiration date (PAT_SCORE_EXPIRE and PAT_SCORE_NO_EXPIRE). This influences the scoring of your audit.
+
+- **Set Up Plugin Scoring**: Define the scoring rules for plugin versions using PLUGIN_VERSION_SCORE. Customize the score for different versions of plugins.
+
+- **Specify Supported Platforms**: Adjust the scores for supported (PLATFORM_SUPPORTED), deprecated (PLATFORM_DEPRECATED), and unsupported (PLATFORM_UNSUPPORTED) platforms.
+
+- **Define Vulnerability Scores**: Customize the scoring for different levels of vulnerabilities found (LOW, MEDIUM, HIGH, CRITICAL) in the VULNERABILITIES_FOUND dictionary.
+
+- **Configure Component Exposures**: Define the score for exposed sensitive data using EXPOSED_SENSITIVE_DATA.
+
+By following these steps and customizing the configuration options, you can create tailored templates for different hosts within your tool. Make sure to adapt the settings to your specific needs and requirements.
+
+## Plugin Enumeration
+
+JIRAudit can currently enumerate 596 out of the 919 Marketplace plugins without authentication. This number is expected to increase in the future as new plugins are added.
+
+It is important to keep all plugins up to date as plugin enumeration cannot currently be prevented. Keeping plugins updated helps improve the security of your system and protects against vulnerabilities.
+
+For a comprehensive review of all installed plugins and their versions, it is recommended to perform an authenticated plugin enumeration. This provides more detailed information about the installed plugins and their compatibility.
+
+## User Enumeration
+
+User enumeration in JIRAudit works by checking against a list of users. This process helps identify potential users within your system.
+
+Currently, the user enumeration query is executed through the '**/secure/QueryComponent!Default.jspa**' endpoint in Jira. You can prevent this by securing the endpoint. For more details, refer to our Best Practices page (work in progress) at this link.
+
+In the future, additional methods will be incorporated into the tool to enable user enumeration through other means. This will enhance the tool's capabilities and provide more ways to enumerate users.
 
 ## :warning: Security Disclaimer
 

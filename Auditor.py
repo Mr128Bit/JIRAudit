@@ -227,7 +227,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         try:
 
             with open(fpath, "w", encoding="UTF-8") as f:
-                json.dump(self.RESULT, f, indent=4)
+                json.dump(self.RESULT, f, indent=4, ensure_ascii=False)
 
         except OSError as osexc:
             logging.error(
@@ -258,11 +258,16 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         user_found = []
 
         for user in user_list:
+            response = None
 
-            response = requests.get(
-                f"{self.JIRA_API.BASE_URL}/secure/QueryComponent!Jql.jspa?jql=creator={user}",
-                timeout=10,
-            )
+            try:
+                response = requests.get(
+                    f"{self.JIRA_API.BASE_URL}/secure/QueryComponent!Jql.jspa?jql=creator={user}",
+                    timeout=10,
+                )
+            except Exception as e: # pylint: disable=broad-exception-caught
+                logging.error("User enumeration throw an exception: %s", e)
+                return user_found
 
             if response.status_code == 401:
 
@@ -473,17 +478,40 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
                     self.TEMPLATE.PAT_SCORE_EXPIRE, self.TEMPLATE.PAT_SCORE_EXPIRE
                 )
 
-    @Authenticated
     @AuditInit
-    def check_exposed_sensitive_data(self):
+    def check_exposed_sensitive_data(self): # pylint: disable=too-many-statements
         """
         Checks the instance for exposed endpoints and rates the result
         """
+
+        def eval_result(endpoint, is_exposed):
+            score = self.TEMPLATE.EXPOSED_SENSITIVE_DATA
+            max_score = score * -1
+
+            if is_exposed:
+
+                prefix = f"[NOT GOOD] [{score}]"
+                prefix = Color.format(prefix, Color.YELLOW)
+
+                self._print_msg(
+                    f"{prefix} '{endpoint}' is open and exposes possible sensitive data!"
+                )
+            else:
+                score = score * -1
+                prefix = f"[GOOD] [{score}]"
+                prefix = Color.format(prefix, Color.GREEN)
+
+                self._print_msg(
+                    f"{prefix} '{endpoint}' is secure!"
+                )
+
+            update_score(score, max_score)
 
         self._print_msg(
             "\n\033[97m", "_" * 19, "[Exposed Data]", "_" * 19, "\033[00m\n"
         )
 
+        final_result = {"exposed_urls": []}
         result = None
 
         try:
@@ -492,29 +520,68 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
             logging.error(
                 "An error occured while retrieving issue statuses: root cause: %s", exce
             )
-            return
-
-        score = self.TEMPLATE.EXPOSED_SENSITIVE_DATA
-        max_score = score * -1
 
         if result:
+            final_result["exposed_urls"].append(self.JIRA_API.WEB_ENDPOINTS.QUERYCOMPONENT.value)
+            final_result["status_enumeration"] = result
 
-            prefix = f"[NOT GOOD] [{score}]"
-            prefix = Color.format(prefix, Color.YELLOW)
-
-            self._print_msg(
-                f"{prefix} '{self.JIRA_API.WEB_ENDPOINTS.QUERYCOMPONENT.value}' is open and exposes possible sensitive data!"
-            )
+            eval_result(self.JIRA_API.WEB_ENDPOINTS.QUERYCOMPONENT.value, True)
+            self._print_msg(Color.format("ATTENTION:", Color.RED), "Not securing this endpoint allows an attacker to enumerate usernames!")
+            self._print_msg("More information:\thttps://jira.atlassian.com/browse/JRASERVER-71536\n")
+            self._print_msg(Color.format("Found exposed issue status:", Color.YELLOW))
+            self._print_msg(result)
         else:
-            score = score * -1
-            prefix = f"[GOOD] [{score}]"
-            prefix = Color.format(prefix, Color.GREEN)
+            eval_result(self.JIRA_API.WEB_ENDPOINTS.QUERYCOMPONENT.value, False)
 
-            self._print_msg(
-                f"{prefix} '{self.JIRA_API.WEB_ENDPOINTS.QUERYCOMPONENT.value}' is secure!"
+        # check dashboard exposure
+
+        result = None
+
+        try:
+            result = self.JIRA_API.get_filters_unauthenticated()
+        except JiraRequestException as exce:
+            logging.error(
+                "An error occured while retrieving issue statuses: root cause: %s", exce
             )
 
-        update_score(score, max_score)
+        if result:
+            final_result["exposed_urls"].append(self.JIRA_API.WEB_ENDPOINTS.FILTERS.value)
+            final_result["filter_enumeration"] = result
+
+            eval_result(self.JIRA_API.WEB_ENDPOINTS.FILTERS.value, True)
+            for filter_ in result:
+                self._print_msg("Filter:\t", Color.format(filter_[0], Color.CYAN))
+                self._print_msg("ID:\t", Color.format(filter_[1], Color.CYAN), "\n")
+        else:
+            eval_result(self.JIRA_API.WEB_ENDPOINTS.FILTERS.value, False)
+
+        result = None
+
+        try:
+            result = self.JIRA_API.get_dashboards_unauthenticated()
+        except JiraRequestException as exce:
+            logging.error(
+                "An error occured while retrieving issue statuses: root cause: %s", exce
+            )
+
+        if result:
+            final_result["exposed_urls"].append(self.JIRA_API.API_ENDPOINTS.DASHBOARDS.value)
+            final_result["dashboard_enumeration"] = result
+            eval_result(self.JIRA_API.API_ENDPOINTS.DASHBOARDS.value, True)
+
+            for dashboard in result:
+                did = dashboard.get("id")
+                name = dashboard.get("name")
+                url = dashboard.get("view")
+
+                self._print_msg("Dashboard:\t", Color.format(name, Color.CYAN))
+                self._print_msg("ID:\t", Color.format(did, Color.CYAN))
+                self._print_msg("URL:\t", Color.format(url, Color.CYAN), "\n")
+
+        else:
+            eval_result(self.JIRA_API.API_ENDPOINTS.DASHBOARDS.value, False)
+
+        self.update_results("exposed_sensitive_data_check", final_result)
 
     @Authenticated
     @AuditInit

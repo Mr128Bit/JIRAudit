@@ -31,12 +31,6 @@ parser.add_argument(
     "-p", "--proxy", help="Tunnel requests through a proxy", required=False
 )
 parser.add_argument(
-    "-t",
-    "--token",
-    help="An admins personal access token for authentication",
-    required=False,
-)
-parser.add_argument(
     "-u", "--username", help="Your username for websudo authentication", required=False
 )
 parser.add_argument(
@@ -116,6 +110,12 @@ parser.add_argument(
     required=False,
 )
 parser.add_argument(
+    "-ce",
+    "--check-exposed-endpoints",
+    help="Check several endpoints for exposed sensitive data and enumerate if possible",
+    action="store_true",
+)
+parser.add_argument(
     "-s",
     "--save",
     help="Save the results as a json file",
@@ -155,9 +155,6 @@ logging.basicConfig(level=LOG_LEVEL, format=FORMAT)
 logging.info("Starting client")
 
 proxy = None
-
-if args.token:
-    TOKEN = args.token
 
 if args.password:
     PASSWORD = args.password
@@ -360,5 +357,7 @@ if __name__ == "__main__":
                     users = [u.strip() for u in fl.readlines()]
 
             auditor.enum_users_unauthenticated(users)
+        if args.check_exposed_endpoints:
+            auditor.check_exposed_sensitive_data()
 
     auditor.end_audit()
