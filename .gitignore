@@ -1,3 +1,10 @@
+cve_utils/__pycache__/
+jira_api/__pycache__/
+jira_api/marketplace_api/__pycache__/
+misc/__pycache__/
+score/__pycache__/
+templates/__pycache__/
+__pycache__/
 session.cookie
 Pipfile.lock
 TODO
