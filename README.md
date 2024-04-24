@@ -50,7 +50,7 @@ Command Overview
 ```
 JIRAudit - Jira auditing tool
 
-usage: JIRAudit - Jira auditing tool [-h] [-p PROXY] [-t TOKEN] [-u USERNAME] [-pw PASSWORD] [-f] [-fua] [-fa] [-d] [-pe] [-vc] [-epat] [-cs] [-upe] [-uise] [-uue <USERLIST>] [-ce] [-s] [-o OUT] [-sm] host
+usage: JIRAudit - Jira auditing tool [-h] [-p PROXY] [-u USERNAME] [-pw PASSWORD] [-f] [-fua] [-fa] [-d] [-pe] [-vc] [-epat] [-cs] [-upe] [-uise] [-uue <USERLIST>] [-ce] [-s] [-o OUT] [-sm] host
 
 Scan your jira instance and get feedback on your configuration
 
@@ -61,8 +61,6 @@ options:
   -h, --help            show this help message and exit
   -p PROXY, --proxy PROXY
                         Tunnel requests through a proxy
-  -t TOKEN, --token TOKEN
-                        An admins personal access token for authentication
   -u USERNAME, --username USERNAME
                         Your username for websudo authentication
   -pw PASSWORD, --password PASSWORD
