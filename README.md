@@ -187,7 +187,7 @@ For questions or issues, please open an issue on the [GitHub Issue Tracker](http
 
 ## :star2: Acknowledgments
 
-Special thanks to my coffe machine for the emotional support while creating this tool.
+Special thanks to my coffee machine for the emotional support while creating this tool.
 
 ## :bookmark_tabs: FAQ
 
