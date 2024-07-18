@@ -1,0 +1,312 @@
+{
+    "PostgreSQL": {
+        "9.2": {
+            "6.0": "supported",
+            "6.1": "supported",
+            "6.2": "supported",
+            "6.3": "supported",
+            "6.4": "supported",
+            "6.5": "supported",
+            "6.6": "supported",
+            "6.7": "deprecated"
+        },
+        "9.3": {
+            "6.0": "supported",
+            "6.1": "supported",
+            "6.2": "supported",
+            "6.3": "supported",
+            "6.4": "supported",
+            "6.5": "supported",
+            "6.6": "supported",
+            "6.7": "supported",
+            "6.8": "supported",
+            "6.9": "supported",
+            "6.10": "supported",
+            "6.11": "supported",
+            "6.12": "deprecated"
+         },
+        "9.4": {
+            "6.0": "supported",
+            "6.1": "supported",
+            "6.2": "supported",
+            "6.3": "supported",
+            "6.4": "supported",
+            "6.5": "supported",
+            "6.6": "supported",
+            "6.7": "supported",
+            "6.8": "supported",
+            "6.9": "supported",
+            "6.10": "supported",
+            "6.11": "supported",
+            "6.12": "supported"
+
+        },
+        "9.5": {
+            "6.0": "supported",
+            "6.1": "supported",
+            "6.2": "supported",
+            "6.3": "supported",
+            "6.4": "supported",
+            "6.5": "supported",
+            "6.6": "supported",
+            "6.7": "supported",
+            "6.8": "supported",
+            "6.9": "supported",
+            "6.10": "supported",
+            "6.11": "supported",
+            "6.12": "supported"
+
+
+          },
+        "9.6": {
+            "6.0": "unsupported",
+            "6.1": "unsupported",
+            "6.2": "unsupported",
+            "6.3": "supported",
+            "6.4": "supported",
+            "6.5": "supported",
+            "6.6": "supported",
+            "6.7": "supported",
+            "6.8": "supported",
+            "6.9": "supported",
+            "6.10": "supported",
+            "6.11": "supported",
+            "6.12": "supported"
+
+
+
+        }
+    },
+    "MySQL": {
+        "5.6": {
+            "6.0": "supported",
+            "6.1": "supported",
+            "6.2": "supported",
+            "6.3": "supported",
+            "6.4": "supported",
+            "6.5": "supported",
+            "6.6": "supported",
+            "6.7": "supported",
+            "6.8": "supported",
+            "6.9": "supported",
+            "6.10": "supported",
+            "6.11": "supported",
+            "6.12": "supported"
+
+        },
+        "5.7": {
+            "6.0": "unsupported",
+            "6.1": "unsupported",
+            "6.2": "unsupported",
+            "6.3": "supported",
+            "6.4": "supported",
+            "6.5": "supported",
+            "6.6": "supported",
+            "6.7": "supported",
+            "6.8": "supported",
+            "6.9": "supported",
+            "6.10": "supported",
+            "6.11": "supported",
+            "6.12": "supported"
+
+
+        }
+        
+    },
+    "Oracle": {
+      "Oracle 12c R1": {
+        "6.0": "supported",
+        "6.1": "supported",
+        "6.2": "supported",
+        "6.3": "supported",
+        "6.4": "supported",
+        "6.5": "supported",
+        "6.6": "supported",
+        "6.7": "supported",
+        "6.8": "supported",
+        "6.9": "supported",
+        "6.10": "supported",
+        "6.11": "supported"
+
+      },
+      "Oracle 12c R2": {
+        "6.11": "supported"
+      },
+      "Oracle 18c": {
+      },
+      "Oracle 19c": {
+      }
+    },
+    "Microsoft": {
+      "Microsoft SQL Server": {
+        "2012": {
+            "6.0": "supported",
+            "6.1": "supported",
+            "6.2": "supported",
+            "6.3": "supported",
+            "6.4": "supported",
+            "6.5": "supported",
+            "6.6": "supported",
+            "6.7": "supported",
+            "6.8": "supported",
+            "6.9": "supported",
+            "6.10": "supported",
+            "6.11": "supported"
+
+
+        },
+        "2014": {
+            "6.0": "supported",
+            "6.1": "supported",
+            "6.2": "supported",
+            "6.3": "supported",
+            "6.4": "supported",
+            "6.5": "supported",
+            "6.6": "supported",
+            "6.7": "supported",
+            "6.8": "supported",
+            "6.9": "supported",
+            "6.10": "supported",
+            "6.11": "supported"
+
+
+
+        },
+        "2016": {
+            "6.10": "supported",
+            "6.11": "supported"
+
+        },
+        "2017": {
+            "6.11": "supported"
+
+        },
+        "2019": {
+        },
+        "2022": {
+
+        }
+      },
+      "Microsoft Azure": {
+        "Azure SQL": {
+            "6.6": "supported",
+            "6.7": "supported",
+            "6.8": "supported",
+            "6.9": "supported",
+            "6.10": "supported"
+
+        },
+        "Azure Database for PostgreSQL": {
+
+        }
+      }
+    },
+    "Amazon": {
+      "Amazon Aurora": {
+        "10": {
+          "8.7": "unsupported",
+          "8.8": "unsupported",
+          "8.9": "unsupported",
+          "8.10": "unsupported",
+          "8.11": "unsupported",
+          "8.12": "unsupported",
+          "8.13": "unsupported",
+          "8.14": "unsupported",
+          "8.15": "unsupported",
+          "8.16": "unsupported",
+          "8.17": "unsupported",
+          "9": "supported",
+          "9.1": "supported",
+          "9.2": "supported",
+          "9.3": "supported",
+          "9.4": "supported",
+          "9.5": "supported",
+          "9.6": "supported",
+          "9.7": "supported",
+          "9.8": "supported",
+          "9.9": "supported",
+          "9.10": "deprecated",
+          "9.11": "deprecated",
+          "9.12": "deprecated"
+        },
+        "11": {
+          "8.7": "unsupported",
+          "8.8": "supported",
+          "8.9": "supported",
+          "8.10": "supported",
+          "8.11": "supported",
+          "8.12": "supported",
+          "8.13": "supported",
+          "8.14": "supported",
+          "8.15": "supported",
+          "8.16": "supported",
+          "8.17": "supported",
+          "9": "supported",
+          "9.1": "supported",
+          "9.2": "supported",
+          "9.3": "supported",
+          "9.4": "supported",
+          "9.5": "supported",
+          "9.6": "supported",
+          "9.7": "supported",
+          "9.8": "supported",
+          "9.9": "supported",
+          "9.10": "deprecated",
+          "9.11": "deprecated",
+          "9.12": "deprecated"
+        },
+        "12": {
+          "8.7": "unsupported",
+          "8.8": "unsupported",
+          "8.9": "unsupported",
+          "8.10": "unsupported",
+          "8.11": "unsupported",
+          "8.12": "unsupported",
+          "8.13": "supported",
+          "8.14": "supported",
+          "8.15": "supported",
+          "8.16": "supported",
+          "8.17": "supported",
+          "9": "supported",
+          "9.1": "supported",
+          "9.2": "supported",
+          "9.3": "supported",
+          "9.4": "supported",
+          "9.5": "supported",
+          "9.6": "supported",
+          "9.7": "supported",
+          "9.8": "supported",
+          "9.9": "supported",
+          "9.10": "supported",
+          "9.11": "supported",
+          "9.12": "supported"
+        },
+        "13": {
+          "8.7": "unsupported",
+          "8.8": "unsupported",
+          "8.9": "unsupported",
+          "8.10": "unsupported",
+          "8.11": "unsupported",
+          "8.12": "unsupported",
+          "8.13": "supported",
+          "8.14": "supported",
+          "8.15": "supported",
+          "8.16": "supported",
+          "8.17": "supported",
+          "9": "supported",
+          "9.1": "supported",
+          "9.2": "supported",
+          "9.3": "supported",
+          "9.4": "supported",
+          "9.5": "supported",
+          "9.6": "supported",
+          "9.7": "supported",
+          "9.8": "supported",
+          "9.9": "supported",
+          "9.10": "supported",
+          "9.11": "supported",
+          "9.12": "supported"
+        }
+      }
+    }
+  }

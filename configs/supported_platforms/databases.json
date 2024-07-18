@@ -2,7 +2,7 @@
   "PostgreSQL": {
       "10": {
         "8.4": "unsupported",
-        "8.5": "supported (from Jira 8.5.4)",
+        "8.5.4": "supported",
         "8.6": "supported",
         "8.7": "supported",
         "8.8": "supported",
@@ -127,7 +127,7 @@
         "7.9": "supported",
         "7.10": "supported",
         "7.11": "supported",
-        "7.12": "deprecated (advance deprecation notice)",
+        "7.12": "deprecated",
         "7.13": "deprecated",
         "8": "unsupported",
         "8.1": "unsupported",
@@ -463,7 +463,9 @@
       "9.10": "supported",
       "9.11": "supported",
       "9.12": "supported"
-    },
+    }
+  },
+  "Microsoft": {
     "Microsoft SQL Server": {
       "2012": {
         "7.4": "supported",
@@ -809,7 +811,9 @@
         "9.11": "supported",
         "9.12": "supported"
       }
-    },
+    }
+  },
+  "Amazon": {
     "Amazon Aurora": {
       "10": {
         "8.7": "unsupported",

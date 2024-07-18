@@ -8,3 +8,9 @@ __pycache__/
 session.cookie
 Pipfile.lock
 TODO
+users.txt
+notes.txt
+groups.txt
+ids.txt
+configs/cve
+cve_utils/exploits

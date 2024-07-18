@@ -10,6 +10,7 @@ urllib3 = "*"
 uuid = "*"
 pathlib = "*"
 lxml = "*"
+cryptography = "*"
 
 [dev-packages]
 

@@ -1,0 +1,26 @@
+{
+    "Oracle JRE/JDK": {
+        "1.8": {
+            "6.0": "supported",
+            "6.1": "supported",
+            "6.2": "supported",
+            "6.3": "supported",
+            "6.4": "supported",
+            "6.5": "supported",
+            "6.6": "supported",
+            "6.7": "supported",
+            "6.8": "supported",
+            "6.9": "supported"
+
+        }
+    },
+    "AdoptOpenJDK": {
+        "8": {
+            "6.6": "supported",
+            "6.7": "supported",
+            "6.8": "supported",
+            "6.9": "supported"
+
+        }
+    }
+}

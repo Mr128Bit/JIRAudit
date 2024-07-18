@@ -1,0 +1,2719 @@
+{
+    "plugin_detection": {
+        "endpoints": {
+            "1210933": {
+                "name": "draw.io Diagrams & Whiteboards",
+                "vendor": "Seibert Media - draw.io",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1210933",
+                "urls": [
+                    "/download/resources/com.mxgraph.confluence.plugins.diagramly:drawio-rte/images/logo/drawlogo72.png",
+                    "/download/resources/com.mxgraph.confluence.plugins.diagramly:drawio-rte/images/logo/sketch-logo128.png"
+                ]
+            },
+            "27447": {
+                "name": "Table Filter, Charts & Spreadsheets for Confluence",
+                "vendor": "Stiltsoft Europe OÜ",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/27447",
+                "urls": [
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/icons/filter-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/icons/pivot-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/icons/chart-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/excerpt.png",
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/excerpt-include.png",
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/icons/spreadsheet-include-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/icons/table-joiner-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/icons/spreadsheet-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/icons/spreadsheet-body-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/icons/csv-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/icons/json-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.plugin.tablefilter.tablefilter/img/icons/ai-table.png"
+                ]
+            },
+            "7019": {
+                "name": "Scroll PDF Exporter for Confluence",
+                "vendor": "K15t",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/7019",
+                "urls": []
+            },
+            "1211438": {
+                "name": "Markdown, HTML, PlantUML, LaTeX, Diagrams, Open API, Mermaid",
+                "vendor": "Modus  Create",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211438",
+                "urls": [
+                    "/download/resources/com.atlassian.plugins.confluence.markdown.confluence-markdown-macro/images/pluginIcon.png"
+                ]
+            },
+            "254": {
+                "name": "Gliffy Diagrams for Confluence",
+                "vendor": "Gliffy",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/254",
+                "urls": [
+                    "/download/resources/com.gliffy.integration.confluence/icons/gliffy_macro_browser.png",
+                    "/download/resources/com.gliffy.integration.confluence/icons/favicon-gliffy-project-70.png",
+                    "/download/resources/com.gliffy.integration.confluence/svg/macro/favicon-gliffy-project.svg"
+                ]
+            },
+            "24982": {
+                "name": "Scroll Word Exporter for Confluence",
+                "vendor": "K15t",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/24982",
+                "urls": []
+            },
+            "1221974": {
+                "name": "Aura Content Formatting Macros (Tabs Theme Miro Figma HTML)",
+                "vendor": "Seibert Media - appanvil",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221974",
+                "urls": [
+                    "/download/resources/com.appanvil.aura.aura/images/aura-divider.png",
+                    "/download/resources/com.appanvil.aura.aura/images/aura-button.png",
+                    "/download/resources/com.appanvil.aura.aura/images/aura-panel.png",
+                    "/download/resources/com.appanvil.aura.aura/images/aura-cards.png",
+                    "/download/resources/com.appanvil.aura.aura/images/aura-tab.png",
+                    "/download/resources/com.appanvil.aura.aura/images/aura-tab-collection.png",
+                    "/download/resources/com.appanvil.aura.aura/images/aura-background-image.png",
+                    "/download/resources/com.appanvil.aura.aura/images/aura-title.png"
+                ]
+            },
+            "1211636": {
+                "name": "Scroll Viewport for Confluence",
+                "vendor": "K15t",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211636",
+                "urls": [
+                    "/download/resources/com.k15t.scroll.scroll-viewport/icons/VPRT_Macro_Icon_Server.png"
+                ]
+            },
+            "16063": {
+                "name": "Numbered Headings",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/16063",
+                "urls": [
+                    "/download/resources/nl.avisi.confluence.plugins.numberedheadings/icons/NH_72.png"
+                ]
+            },
+            "1215215": {
+                "name": "ScriptRunner for Confluence",
+                "vendor": "Adaptavist",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215215",
+                "urls": []
+            },
+            "1215115": {
+                "name": "PlantUML Diagrams for Confluence",
+                "vendor": "Stratus Add-ons",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215115",
+                "urls": [
+                    "/download/resources/com.mxgraph.confluence.plugins.plantuml:plantuml-editor/images/plant-uml-atlas.png"
+                ]
+            },
+            "247": {
+                "name": "Content Formatting Macros for Confluence",
+                "vendor": "Kolekti (part of The Adaptavist Group)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/247",
+                "urls": [
+                    "/download/resources/com.adaptavist.confluence.contentFormattingMacros/icons/CFMC_Kolekti_icon80x80.png"
+                ]
+            },
+            "169": {
+                "name": "MultiExcerpt",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/169",
+                "urls": [
+                    "/download/resources/biz.artemissoftware.confluence.multiexcerpt.MultiExcerptMacro:multiexcerpt-download-resources/logos/multi-excerpt-72.png"
+                ]
+            },
+            "1211136": {
+                "name": "Refined Toolkit for Confluence",
+                "vendor": "Refined",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211136",
+                "urls": [
+                    "/download/resources/com.refinedwiki.confluence.plugins.uitoolkit/images/macro/button.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.uitoolkit/images/macro/tabs.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.uitoolkit/images/macro/tab.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.uitoolkit/images/macro/steps.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.uitoolkit/images/macro/step.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.uitoolkit/images/macro/textbox.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.uitoolkit/images/macro/expand.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.uitoolkit/images/macro/children.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.uitoolkit/images/macro/children-cards.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.uitoolkit/images/macro/image.png"
+                ]
+            },
+            "1220562": {
+                "name": "External Share for Confluence",
+                "vendor": "Warsaw Dynamics",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220562",
+                "urls": [
+                    "/download/resources/ovh.atlasinc.confluence.confluence-share/images/plugin-icon.png            "
+                ]
+            },
+            "197": {
+                "name": "Advanced Tables for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/197",
+                "urls": [
+                    "/download/resources/org.swift.confluence.table/img/table-80x80.png"
+                ]
+            },
+            "1211644": {
+                "name": "Questions for Confluence",
+                "vendor": "Atlassian",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211644",
+                "urls": []
+            },
+            "1216862": {
+                "name": "Team Files: SharePoint & Google Drive for Confluence",
+                "vendor": "ikuTeam (Office 365 & Gsuite Apps)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216862",
+                "urls": [
+                    "/download/resources/cloud-files-google-drive-docs-office-365-documents-dropbox-topdox-for-confluence/images/TF-confluence-addon-icon-server@2x.png"
+                ]
+            },
+            "28637": {
+                "name": "Viewtracker - Analytics for Confluence",
+                "vendor": "bitvoodoo ag",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/28637",
+                "urls": [
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.viewtracker/images/viewtracker-macro.png"
+                ]
+            },
+            "1210882": {
+                "name": "LaTeX Math",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1210882",
+                "urls": [
+                    "/download/resources/com.tensixtwo.conf.latexmath:editor_latexmath/images/insert_inline_80.png",
+                    "/download/resources/com.tensixtwo.conf.latexmath:editor_latexmath/images/insert_unit_80.png",
+                    "/download/resources/com.tensixtwo.conf.latexmath:editor_latexmath/images/insert_block_80.png",
+                    "/download/resources/com.tensixtwo.conf.latexmath:editor_latexmath/images/insert_blockref_80.png",
+                    "/download/resources/com.tensixtwo.conf.latexmath:editor_latexmath/images/insert_blocktable_80.png",
+                    "/download/resources/com.tensixtwo.conf.latexmath/icon_16.png"
+                ]
+            },
+            "1216484": {
+                "name": "Google Drive & Docs for Confluence",
+                "vendor": "Bilith (Google Workspace apps)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216484",
+                "urls": [
+                    "/download/resources/com.bilith.lref.confluence-gdrive:img-resources/img/gdrive/gdrive_80x80.png"
+                ]
+            },
+            "42684": {
+                "name": "No Email Storm",
+                "vendor": "Stiltsoft Europe OÜ",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/42684",
+                "urls": []
+            },
+            "1211860": {
+                "name": "ConfiForms - Data Forms & Workflows for Confluence",
+                "vendor": "Vertuna LLC",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211860",
+                "urls": [
+                    "/download/resources/com.vertuna.confluence.plugins.confiforms:confiformResources/confi-new-140x140.png"
+                ]
+            },
+            "15231": {
+                "name": "Refined for Confluence DC | Intranet Themes & Navigation",
+                "vendor": "Refined",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/15231",
+                "urls": [
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/spaces_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/activity_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/news_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/divbox_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/view_files_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/user_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/user_network_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/users_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/space_news_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/pagetree_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/search_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/star_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/calendar_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/add_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/my_work_icon.png",
+                    "/download/resources/com.refinedwiki.confluence.plugins.theme.original/images/icons/macrobrowser/content_layout_icon.png"
+                ]
+            },
+            "1214971": {
+                "name": "Handy Macros for Confluence: Status Dropdown & UI Formatting",
+                "vendor": "Stiltsoft Europe OÜ",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214971",
+                "urls": [
+                    "/download/resources/com.stiltsoft.confluence.handy.macros/images/macro/status-timestamp-80.png",
+                    "/download/resources/com.stiltsoft.confluence.handy.macros/images/macro/status-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.handy.macros/images/macro/button-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.handy.macros/images/macro/timestamp-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.handy.macros/images/macro/reminder-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.handy.macros/images/macro/carousel-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.handy.macros/images/macro/tip-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.handy.macros/images/macro/cards-macro.png",
+                    "/download/resources/com.stiltsoft.confluence.handy.macros/images/macro/cards-content-macro.png"
+                ]
+            },
+            "22929": {
+                "name": "Copy Page Tree",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/22929",
+                "urls": []
+            },
+            "1219386": {
+                "name": "Open API (Swagger) Integration",
+                "vendor": "Toshihiro Sato",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219386",
+                "urls": [
+                    "/download/resources/com.confluence.swagger.api.document:swagger-open-api-main-res/images/a82.png",
+                    "/download/resources/com.confluence.swagger.api.document:swagger-open-api-main-res/images/s82.png"
+                ]
+            },
+            "245": {
+                "name": "Composition Tabs for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/245",
+                "urls": [
+                    "/download/resources/net.customware.confluence.plugin.composition/img/macro_icon.png"
+                ]
+            },
+            "1217608": {
+                "name": "Scroll Documents for Confluence",
+                "vendor": "K15t",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217608",
+                "urls": [
+                    "/download/resources/k15t-scroll-document-versions-for-confluence/documents_icon_toolbox.svg",
+                    "/download/resources/k15t-scroll-document-versions-for-confluence/documents_icon_macro.png"
+                ]
+            },
+            "284": {
+                "name": "Confluence Command Line Interface (CLI)",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/284",
+                "urls": []
+            },
+            "1220252": {
+                "name": "Flexible User License & Seat Auto Management for Confluence",
+                "vendor": "Open Source Consulting",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220252",
+                "urls": []
+            },
+            "28632": {
+                "name": "Navitabs - Tabs for Confluence",
+                "vendor": "bitvoodoo ag",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/28632",
+                "urls": [
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.navitabs/images/navitabs-macro.png"
+                ]
+            },
+            "1212129": {
+                "name": "SAML SSO Single Sign On - Confluence SSO OAuth + User Sync",
+                "vendor": "resolution Reichert Network Solutions GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212129",
+                "urls": []
+            },
+            "1210786": {
+                "name": "Multivote & Enterprise Survey for Confluence",
+                "vendor": "TNG Technology Consulting GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1210786",
+                "urls": []
+            },
+            "252": {
+                "name": "HTML for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/252",
+                "urls": [
+                    "/download/resources/org.swift.confluence.html/img/html-80x80.png"
+                ]
+            },
+            "1215664": {
+                "name": "Source Editor for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215664",
+                "urls": []
+            },
+            "123": {
+                "name": "Better Content Archiving and Analytics for Confluence",
+                "vendor": "Midori Global Consulting Kft.",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/123",
+                "urls": []
+            },
+            "190": {
+                "name": "Scaffolding Forms & Templates for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/190",
+                "urls": [
+                    "/download/resources/net.customware.confluence.plugin.scaffolding/images/scaffolding-logo.png"
+                ]
+            },
+            "202": {
+                "name": "Visibility for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/202",
+                "urls": [
+                    "/download/resources/net.customware.confluence.plugin.visibility/icons/visibilityMacroIcon.png"
+                ]
+            },
+            "143": {
+                "name": "Comala Publishing",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/143",
+                "urls": [
+                    "/download/resources/com.comalatech.publishing/images2/ahpicon16.png",
+                    "/download/resources/com.comalatech.publishing:space-publishing/images/publishspace.gif"
+                ]
+            },
+            "1218247": {
+                "name": "SharePoint Connector for Confluence",
+                "vendor": "Communardo Products GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218247",
+                "urls": [
+                    "/download/resources/de.communardo.confluence.plugins.csi:csi-main-resources/images/sharepoint-logo-80x80.png"
+                ]
+            },
+            "1211609": {
+                "name": "Table Enhancer for Confluence",
+                "vendor": "TNG Technology Consulting GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211609",
+                "urls": [
+                    "/download/resources/com.tngtech.confluence.plugins.tableenhancer/images/pluginLogo.png"
+                ]
+            },
+            "144": {
+                "name": "Page Approval for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/144",
+                "urls": [
+                    "/download/resources/net.customware.confluence.plugin.pageapproval:pageapproval-plugin-resources/images/icon-macro.png"
+                ]
+            },
+            "1212486": {
+                "name": "Elements Spreadsheet - tables for Data & Project Management",
+                "vendor": "Elements",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212486",
+                "urls": [
+                    "/download/resources/com.valiantys.spreadsheets/images/macro_icon.png"
+                ]
+            },
+            "186": {
+                "name": "Reporting for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/186",
+                "urls": []
+            },
+            "1220493": {
+                "name": "Custom Charts for Confluence - Jira Dashboard Report | Tempo",
+                "vendor": "Tempo Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220493",
+                "urls": [
+                    "/download/resources/com.oldstreetsolutions.atlassian.confluence.custom-charts:custom-charts-images/images/custom-charts-macro-icon.png",
+                    "/download/resources/com.oldstreetsolutions.atlassian.confluence.custom-charts:custom-charts-images/images/simple-search-macro-icon.png",
+                    "/download/resources/com.oldstreetsolutions.atlassian.confluence.custom-charts:custom-charts-images/images/issue-list-macro-icon.png"
+                ]
+            },
+            "1211126": {
+                "name": "Polls for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211126",
+                "urls": [
+                    "/download/resources/com.simplenia.confluence.plugins.polls/images/polls-macro.png"
+                ]
+            },
+            "1211199": {
+                "name": "PocketQuery - SQL & REST for Confluence",
+                "vendor": "Lively Apps",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211199",
+                "urls": [
+                    "/download/resources/de.scandio.confluence.plugins.pocketquery/icon"
+                ]
+            },
+            "1211267": {
+                "name": "EasyMind - Mind Maps for Confluence",
+                "vendor": "MoroSystems, s.r.o.",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211267",
+                "urls": [
+                    "/download/resources/cz.morosystems.atlassian.plugin.easymind:easymind-confluence-page-edit-resources/images/easy-mind-logo.png"
+                ]
+            },
+            "1211757": {
+                "name": "HideElements for Confluence",
+                "vendor": "Lively Apps",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211757",
+                "urls": [
+                    "/download/resources/de.scandio.confluence.plugins.hideelements-macro/icon"
+                ]
+            },
+            "256": {
+                "name": "Balsamiq Wireframes for Confluence",
+                "vendor": "Balsamiq",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/256",
+                "urls": [
+                    "/download/resources/com.balsamiq.confluence.plugins.mockups/icon_24x24_with_border.png"
+                ]
+            },
+            "261": {
+                "name": "Forms for Confluence | Capture feedback with surveys & polls",
+                "vendor": "Kolekti (part of The Adaptavist Group)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/261",
+                "urls": [
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/forms_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/hidden_field_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/outgoing-destinations_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/destination_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/input-field_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/radiobutton_group_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/checkbox_group_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/radiobuttonmatrix.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/checkboxmatrix.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/responses_table_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/dropdown-list-icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/conditional-fields.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/datepicker_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/textarea_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/submit_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/attachment.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/submit-img_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/clear_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/success_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/captcha_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/fieldset_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/survey-page.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/mail-body-formatter_icon.png",
+                    "/download/resources/com.adaptavist.confluence.formMailNG:images-resources/images/star_icon.png"
+                ]
+            },
+            "1216797": {
+                "name": "Easy Dropdown Menu (Drop down selection)",
+                "vendor": "EPS Software Engineering AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216797",
+                "urls": [
+                    "/download/resources/eps.focuspro.EasyDropdownMenu/images/pluginLogo.png"
+                ]
+            },
+            "1215176": {
+                "name": "Open API Documentation for Confluence",
+                "vendor": "O'Hara Group",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215176",
+                "urls": [
+                    "/download/resources/net.oharagroup.confluence.plugins.confluence-open-api/images/open-api-icon.png"
+                ]
+            },
+            "6484": {
+                "name": "Security & Encryption for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/6484",
+                "urls": [
+                    "/download/resources/net.customware.confluence.plugin.vault/icons/secure.png"
+                ]
+            },
+            "1211160": {
+                "name": "GoEdit - Simply edit attachments!",
+                "vendor": "KontextWork",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211160",
+                "urls": []
+            },
+            "1210818": {
+                "name": "Scroll Versions for Confluence",
+                "vendor": "K15t",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1210818",
+                "urls": []
+            },
+            "225": {
+                "name": "SQL for Confluence (Pro Edition)",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/225",
+                "urls": [
+                    "/download/resources/org.swift.confluence.sql/img/sql-80x80.png"
+                ]
+            },
+            "1220850": {
+                "name": "User Switcher for Confluence",
+                "vendor": "Sweet Bananas",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220850",
+                "urls": []
+            },
+            "1212523": {
+                "name": "Requirement Yogi - Requirements Management for Confluence",
+                "vendor": "Requirement Yogi",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212523",
+                "urls": [
+                    "/download/resources/com.playsql.requirementyogi/img/ry-v3-72px-simple.png",
+                    "/download/resources/com.playsql.requirementyogi/img/ry-v3-svg-simple-blue-bicolor.svg"
+                ]
+            },
+            "36199": {
+                "name": "Cenote Lockpoint - Attachment Check-out",
+                "vendor": "Cenote",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/36199",
+                "urls": [
+                    "/download/resources/com.arsenale.plugins.lockpoint:lockpoint-style-resources/images/16x16_lockpoint.png"
+                ]
+            },
+            "1217079": {
+                "name": "Page View Tracker",
+                "vendor": "KC Integrations",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217079",
+                "urls": [
+                    "/download/resources/net.kentcom.page-view-tracker/images/Logo_PageViewer.png"
+                ]
+            },
+            "28648": {
+                "name": "Translations for Confluence",
+                "vendor": "bitvoodoo ag",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/28648",
+                "urls": [
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/en_US.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/be_BY.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/bg_BG.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/en_CA.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/fr_CA.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/ca_ES.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/zh_CN.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/hr_HR.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/cs_CZ.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/da_DK.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/nl_NL.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/en_GB.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/et_EE.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/fi_FI.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/fr_FR.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/de_DE.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/el_GR.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/hi_IN.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/hu_HU.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/is_IS.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/id_ID.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/en_IE.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/it_IT.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/ja_JP.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/ko_KR.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/lv_LV.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/lt_LT.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/mt_MT.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/nb_NO.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/nn_NO.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/pl_PL.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/pt_PT.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/pt_BR.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/ro_RO.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/ru_RU.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/sr_SP.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/sk_SK.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/sl_SI.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/es_ES.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/sv_SE.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/th_TH.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/tr_TR.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/uk_UA.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/vi_VN.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/ms_MY.png",
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.language/images/language_macro_80.png"
+                ]
+            },
+            "1217554": {
+                "name": "Outlook Calendars for Confluence",
+                "vendor": "yasoon - Microsoft 365 for Jira",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217554",
+                "urls": [
+                    "/download/resources/com.yasoon.calendar:yasoon-assets/images/macro-calendar-browser-placeholder.png"
+                ]
+            },
+            "1219677": {
+                "name": "Smart Terms for Confluence - Glossary",
+                "vendor": "Creativas",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219677",
+                "urls": [
+                    "/download/resources/com.mute.confluence.plugins.terms/images/logo_72.png"
+                ]
+            },
+            "166": {
+                "name": "Linking for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/166",
+                "urls": [
+                    "/download/resources/net.customware.confluence.plugin.linking/icons/servicerocket.png"
+                ]
+            },
+            "1211672": {
+                "name": "Excellentable Spreadsheet for Confluence",
+                "vendor": "Addteq Inc",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211672",
+                "urls": [
+                    "/download/resources/Addteq.Excellentable/images/addteq-plugin-icon.png"
+                ]
+            },
+            "194": {
+                "name": "SubSpace Navigation for Confluence",
+                "vendor": "Communardo Products GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/194",
+                "urls": [
+                    "/download/resources/de.communardo.confluence.plugins.subspace/images/pluginIcon.png"
+                ]
+            },
+            "1216979": {
+                "name": "Smart Courses for Confluence - LMS",
+                "vendor": "Creativas",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216979",
+                "urls": [
+                    "/download/resources/com.mute.confluence.plugins.lms/images/course-list-macro_80.png"
+                ]
+            },
+            "1221271": {
+                "name": "Easy Heading Macro - Floating Table of Contents",
+                "vendor": "Shinetech Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221271",
+                "urls": [
+                    "/download/resources/com.binguo.confluence.headingfree.easy-heading-free/images/browserLogo.png"
+                ]
+            },
+            "1211445": {
+                "name": "Markdown for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211445",
+                "urls": [
+                    "/download/resources/org.swift.confluence.markdown/img/markdown-80x80.png"
+                ]
+            },
+            "1214062": {
+                "name": "Page Tree Creator Pro (Blueprint, Template)",
+                "vendor": "EPS Software Engineering AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214062",
+                "urls": []
+            },
+            "1216685": {
+                "name": "Last Log for Confluence",
+                "vendor": "Decadis AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216685",
+                "urls": []
+            },
+            "1214110": {
+                "name": "IZI for Confluence - LMS, Training Courses, Quizzes",
+                "vendor": "Stiltsoft Europe OÜ",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214110",
+                "urls": [
+                    "/download/resources/com.stiltsoft.confluence.quiz/images/macro-question-logo.png",
+                    "/download/resources/com.stiltsoft.confluence.quiz/images/macro-quiz-logo.png"
+                ]
+            },
+            "29106": {
+                "name": "User Profiles for Confluence",
+                "vendor": "Communardo Products GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/29106",
+                "urls": [
+                    "/download/resources/de.communardo.confluence.plugins.userprofile/images/icons/profile.png",
+                    "/download/resources/de.communardo.confluence.plugins.userprofile/images/icons/contact-person-macro-cloud.png",
+                    "/download/resources/de.communardo.confluence.plugins.userprofile/images/icons/profilelist.png",
+                    "/download/resources/de.communardo.confluence.plugins.userprofile/images/icons/orgchart-compact.png",
+                    "/download/resources/de.communardo.confluence.plugins.userprofile/images/icons/orgchart.png"
+                ]
+            },
+            "1216387": {
+                "name": "Approvals for Confluence",
+                "vendor": "AppFox",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216387",
+                "urls": [
+                    "/download/resources/com.automation-consultants.accloud.approvalmacro:icon-resources/pluginLogo.png"
+                ]
+            },
+            "253": {
+                "name": "Scroll ImageMap for Confluence",
+                "vendor": "K15t",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/253",
+                "urls": [
+                    "/download/resources/de.dl.confluence.plugin.imagemap.ImageMapPlugin/scroll-imagemap-assets/IM_MacroIcon_80x80.png"
+                ]
+            },
+            "1211675": {
+                "name": "Git for Confluence | Markdown, PlantUML, Graphviz, Mermaid",
+                "vendor": "Avisi Apps bv",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211675",
+                "urls": [
+                    "/download/resources/nl.avisi.confluence.plugins.git-plugin/icons/GIT_80.png"
+                ]
+            },
+            "1218917": {
+                "name": "Blueprint Creator - Advanced Templates: Pages, Blog & Spaces",
+                "vendor": "Seibert Media - Junovi",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218917",
+                "urls": []
+            },
+            "195": {
+                "name": "Survey and Vote Macros",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/195",
+                "urls": [
+                    "/download/resources/com.nearinfinity.confluence.survey-plugin:resources/logos/srvlogo.png",
+                    "/download/resources/com.nearinfinity.confluence.survey-plugin:resources/logos/srvlogo-survey.png"
+                ]
+            },
+            "4909": {
+                "name": "Content Exporter (Word, PDF, HTML)",
+                "vendor": "META-INF KFT",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/4909",
+                "urls": [
+                    "/download/resources/com.metainf.confluence.plugin.pagetreeexporter.pagetree-word-exporter-plugin/images/content-exporter-pdf-icon.png",
+                    "/download/resources/com.metainf.confluence.plugin.pagetreeexporter.pagetree-word-exporter-plugin/images/content-exporter-doc-icon.png",
+                    "/download/resources/com.metainf.confluence.plugin.pagetreeexporter.pagetree-word-exporter-plugin/images/content-exporter-html-icon.png",
+                    "/download/resources/hu.metainf.plugin.confluence.contentexporter.server/images/page-break-icon.png",
+                    "/download/resources/hu.metainf.plugin.confluence.contentexporter.server/images/custom-field-icon.png",
+                    "/download/resources/hu.metainf.plugin.confluence.contentexporter.server/images/page-bottom-icon.png"
+                ]
+            },
+            "1212529": {
+                "name": "Include Bitbucket for Confluence |Markdown,AsciiDoc,PlantUML",
+                "vendor": "Mibex Software GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212529",
+                "urls": [
+                    "/download/resources/ch.mibex.confluence.include/images/macro-icon.png"
+                ]
+            },
+            "5295": {
+                "name": "Comala Metadata",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/5295",
+                "urls": []
+            },
+            "1219284": {
+                "name": "BPMN Modeler Enterprise",
+                "vendor": "viadee Unternehmensberatung AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219284",
+                "urls": [
+                    "/download/resources/de.viadee.confluence.bpmn-plugin-enterprise/images/logo-BPMN-Modeler-Enterprise.png",
+                    "/download/resources/de.viadee.confluence.bpmn-plugin-enterprise/images/logo-BPMN-Process-Net.png",
+                    "/download/resources/images/pluginIcon.png",
+                    "/download/resources/images/processNetPluginIcon.png"
+                ]
+            },
+            "350288": {
+                "name": "Lucidchart Diagrams Connector",
+                "vendor": "Lucid",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/350288",
+                "urls": []
+            },
+            "1212124": {
+                "name": "Content Formatting Toolkit for Confluence",
+                "vendor": "VECTORS",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212124",
+                "urls": [
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/tabs.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/horizontal-nav-group.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/horizontal-nav-item.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/vertical-nav-group.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/vertical-nav-item.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/progress-bar.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/page-status.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/sfa/hor-tab-group.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/sfa/hor-tab.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/sfa/advanded-progress-bar.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/sfa/tooltip.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/sfa/button.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/sfa/note.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/sfa/percentage-progres-bar.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/sfa/panels.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/sfa/notification.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/sfa/expander-group.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.formatting.macros/images/sfa/expander.png"
+                ]
+            },
+            "420604": {
+                "name": "Scroll HTML Exporter for Confluence",
+                "vendor": "K15t",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/420604",
+                "urls": [
+                    "/download/resources/com.k15t.scroll.scroll-html/shared-macro-icons/indexterm.png",
+                    "/download/resources/com.k15t.scroll.scroll-html/shared-macro-icons/pi.png",
+                    "/download/resources/com.k15t.scroll.scroll-html/shared-macro-icons/code.png",
+                    "/download/resources/com.k15t.scroll.scroll-html/shared-macro-icons/ignore.png",
+                    "/download/resources/com.k15t.scroll.scroll-html/shared-macro-icons/only.png",
+                    "/download/resources/com.k15t.scroll.scroll-html/shared-macro-icons/title.png",
+                    "/download/resources/com.k15t.scroll.scroll-html/shared-macro-icons/tablelayout.png"
+                ]
+            },
+            "1213030": {
+                "name": "SVG out",
+                "vendor": "Purde Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213030",
+                "urls": [
+                    "/download/resources/de.edrup.confluence.plugins.svg-out/images/svg_out_logo.png",
+                    "/download/resources/de.edrup.confluence.plugins.svg-out/images/svg_out_injected.png"
+                ]
+            },
+            "1214272": {
+                "name": "Task Reminder for Confluence",
+                "vendor": "Lively Apps",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214272",
+                "urls": [
+                    "/download/resources/de.scandio.confluence.plugins.task-reminder/icon"
+                ]
+            },
+            "1220341": {
+                "name": "Linchpin Intranet Suite",
+                "vendor": "Seibert Media",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220341",
+                "urls": []
+            },
+            "1217080": {
+                "name": "Questions & Answers",
+                "vendor": "EliteSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217080",
+                "urls": [
+                    "/download/resources/com.elitesoftsp.confluence.tiny.question.answer.plugins:tiny-qa-main-res/images/question-icon.png"
+                ]
+            },
+            "216": {
+                "name": "Excel for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/216",
+                "urls": [
+                    "/download/resources/org.swift.confluence.excel/img/excel-80x80.png"
+                ]
+            },
+            "1216789": {
+                "name": "OneDrive & SharePoint for Confluence",
+                "vendor": "Bilith (Office 365 apps)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216789",
+                "urls": [
+                    "/download/resources/onedrive-confluence:img-resources/img/onedrive/onedrive_80x80.png"
+                ]
+            },
+            "1214206": {
+                "name": "Flow Board",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214206",
+                "urls": [
+                    "/download/resources/net.artemissoftware.confluence.flowboard.FlowBoard:flowboard-resources/icons/fb-icon.png"
+                ]
+            },
+            "1218080": {
+                "name": "Smart Tables for Confluence",
+                "vendor": "Creativas",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218080",
+                "urls": []
+            },
+            "1216348": {
+                "name": "Advanced Microsoft Teams Confluence Connector",
+                "vendor": "Move Work Forward",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216348",
+                "urls": []
+            },
+            "1214087": {
+                "name": "Space Admin for Confluence",
+                "vendor": "Decadis AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214087",
+                "urls": []
+            },
+            "257": {
+                "name": "Graphviz Diagrams for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/257",
+                "urls": [
+                    "/download/resources/com.atlassian.confluence.extra.graphviz/img/graphviz-80x80.png"
+                ]
+            },
+            "1215542": {
+                "name": "mO Confluence SAML SSO (Single Sign On),Confluence SSO Login",
+                "vendor": "miniOrange",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215542",
+                "urls": []
+            },
+            "1222572": {
+                "name": "Mermaid Charts & Diagrams for Confluence",
+                "vendor": "weweave UG (limited liability)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1222572",
+                "urls": [
+                    "/download/resources/confluence-mermaid:weweaveConfluenceMermaid-resources-html/images/mermaidPluginLogo.png"
+                ]
+            },
+            "1219751": {
+                "name": "Graphity - Diagrams for Confluence",
+                "vendor": "yWorks GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219751",
+                "urls": [
+                    "/download/resources/com.yworks.plugins.confluence.graphity/icons/plugin-logo-80x80px.png",
+                    "/download/resources/com.yworks.plugins.confluence.graphity/resources/graphity/&amp;servletRoot=$req.contextPath/plugins/servlet",
+                    "/download/resources/com.yworks.plugins.confluence.graphity/icons/plugin-icon-inverted.svg"
+                ]
+            },
+            "1211800": {
+                "name": "Glossary for Confluence",
+                "vendor": "VECTORS",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211800",
+                "urls": [
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.glossary:check-term-definition-resources/images/glossary-16-hlight.svg",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.glossary/images/gloss-search.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.glossary/images/gloss-term.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.glossary/images/gloss-container.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.glossary/images/gloss-overview.png"
+                ]
+            },
+            "1213286": {
+                "name": "Tree View",
+                "vendor": "Purde Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213286",
+                "urls": [
+                    "/download/resources/de.edrup.confluence.plugins.tree-view/images/tree_view_logo.png"
+                ]
+            },
+            "1213690": {
+                "name": "Metadata for Confluence",
+                "vendor": "Communardo Products GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213690",
+                "urls": [
+                    "/download/resources/com.communardo.confluence.metadata/images/display-01.png",
+                    "/download/resources/com.communardo.confluence.metadata/images/history-03.png",
+                    "/download/resources/com.communardo.confluence.metadata/images/overview-02.png"
+                ]
+            },
+            "1210924": {
+                "name": "Image Slider for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1210924",
+                "urls": [
+                    "/download/resources/com.simplenia.confluence.plugins.imageslider/images/image-slider-macro.png",
+                    "/download/resources/com.simplenia.confluence.plugins.imageslider/images/image-slider-logo.png",
+                    "/download/resources/com.simplenia.confluence.plugins.imageslider/images/content-slider-macro.png",
+                    "/download/resources/com.simplenia.confluence.plugins.imageslider/images/content-slider-entry-macro.png",
+                    "/download/resources/com.simplenia.confluence.plugins.imageslider/images/gallery-slider-macro.png"
+                ]
+            },
+            "9475": {
+                "name": "SU for Confluence",
+                "vendor": "The Plugin People",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/9475",
+                "urls": []
+            },
+            "1215565": {
+                "name": "Page Views",
+                "vendor": "EliteSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215565",
+                "urls": [
+                    "/download/resources/com.elitesoftsp.confluence.page.tracking.plugins:page-tracking-main-res/images/chart-bar.png"
+                ]
+            },
+            "1218360": {
+                "name": "mO Confluence OAuth SSO, Confluence OpenID Connect/OIDC SSO",
+                "vendor": "miniOrange",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218360",
+                "urls": []
+            },
+            "1219504": {
+                "name": "eazyBI Reports and Charts for Confluence",
+                "vendor": "eazyBI",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219504",
+                "urls": [
+                    "/download/resources/com.eazybi.confluence.plugins.eazybi-confluence/images/eazybi_macro_icon.png"
+                ]
+            },
+            "1217530": {
+                "name": "Miro for Confluence",
+                "vendor": "Miro | The Visual Workspace for Innovation",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217530",
+                "urls": []
+            },
+            "1216446": {
+                "name": "Asana for Confluence",
+                "vendor": "Bilith (Asana apps)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216446",
+                "urls": [
+                    "/download/resources/com.bilith.lref.confluence-asana:img-resources/img/asana/asana_80x80.png"
+                ]
+            },
+            "1215703": {
+                "name": "Markdown Extensions for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215703",
+                "urls": [
+                    "/download/resources/mohamicorp-render-markdown/images/pluginLogo.png"
+                ]
+            },
+            "1221692": {
+                "name": "Figma for Confluence Pro",
+                "vendor": "CollabSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221692",
+                "urls": []
+            },
+            "1218914": {
+                "name": "Open API (Swagger) Editor for Confluence",
+                "vendor": "EliteSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218914",
+                "urls": [
+                    "/download/resources/com.elitesoft.confluence.open.api.plugins:confluence-open-api-main-res/images/plugin-logo-82.png"
+                ]
+            },
+            "189": {
+                "name": "Run Self-Service Reports for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/189",
+                "urls": [
+                    "/download/resources/org.swift.confluence.run/img/run-80x80.png"
+                ]
+            },
+            "1214324": {
+                "name": "Page Tree Creator (Blueprint, Template) (former Space Tree)",
+                "vendor": "EPS Software Engineering AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214324",
+                "urls": []
+            },
+            "207": {
+                "name": "LaTeX and MathJax",
+                "vendor": "The Plugin People",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/207",
+                "urls": [
+                    "/download/resources/com.stepstonetech.confluence.plugins.latex:mathjax-resources/images/mathjax-icon.png",
+                    "/download/resources/com.stepstonetech.confluence.plugins.latex:mathjax-resources/images/latex-icon.png"
+                ]
+            },
+            "1213955": {
+                "name": "News Teaser for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213955",
+                "urls": [
+                    "/download/resources/com.simplenia.confluence.plugins.newsteaser/images/news-slider-macro.png",
+                    "/download/resources/com.simplenia.confluence.plugins.newsteaser/images/news-teaser-macro.png",
+                    "/download/resources/com.simplenia.confluence.plugins.newsteaser/images/news-ticker-macro.png"
+                ]
+            },
+            "1215391": {
+                "name": "STAGIL Incoming Links",
+                "vendor": "STAGIL / catworkx",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215391",
+                "urls": [
+                    "/download/resources/de.stagil.silcm.stagil-incoming-links-confluence-macro/images/SILFC_Product-Logo_144x144.png"
+                ]
+            },
+            "1215813": {
+                "name": "Iframes for Confluence",
+                "vendor": "Modus  Create",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215813",
+                "urls": [
+                    "/download/resources/cr.tin.iframed.iframed-macro/images/aa_ifr_sqlogo_72x72.png"
+                ]
+            },
+            "1211190": {
+                "name": "External Links for Confluence",
+                "vendor": "bitvoodoo ag",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211190",
+                "urls": []
+            },
+            "1211933": {
+                "name": "Brikit Theme Press for Confluence",
+                "vendor": "Brikit",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211933",
+                "urls": [
+                    "/download/resources/com.brikit.themepress:theme-base/images/icons/macros/theme-press-hidden-macro.png",
+                    "/download/resources/com.brikit.themepress:theme-base/images/icons/macros/theme-press-macro.png"
+                ]
+            },
+            "1219507": {
+                "name": "Power Scripts for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219507",
+                "urls": [
+                    "/download/resources/com.cprime.confluence.power-scripts-confluence/images/ps-confluence-new.png"
+                ]
+            },
+            "1177667": {
+                "name": "Comala Boards for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1177667",
+                "urls": [
+                    "/download/resources/com.comalatech.adhoccanvas:boardresources/images/comalacanvas80.png",
+                    "/download/resources/com.comalatech.adhoccanvas:checklistresources/images/listicon80.png",
+                    "/download/resources/com.comalatech.adhoccanvas:adhocstyles/images/comalacanvas16.png",
+                    "/download/resources/com.comalatech.adhoccanvas:boardresources/images/listicon80.png"
+                ]
+            },
+            "28553": {
+                "name": "Advanced Panelboxes for Confluence",
+                "vendor": "bitvoodoo ag",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/28553",
+                "urls": [
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.panelbox/icons/panelbox-macro.png"
+                ]
+            },
+            "1216734": {
+                "name": "Github Macros for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216734",
+                "urls": [
+                    "/download/resources/com.mohamicorp.confluence.macro.github.mohamicorp-github-macros/images/macro-readme-icon.png",
+                    "/download/resources/com.mohamicorp.confluence.macro.github.mohamicorp-github-macros/images/macro-issue-icon.png",
+                    "/download/resources/com.mohamicorp.confluence.macro.github.mohamicorp-github-macros/images/macro-pr-icon.png",
+                    "/download/resources/com.mohamicorp.confluence.macro.github.mohamicorp-github-macros/images/macro-file-icon.png"
+                ]
+            },
+            "1217951": {
+                "name": "JSON Viewer & Editor",
+                "vendor": "EliteSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217951",
+                "urls": [
+                    "/download/resources/com.elitesoftsp.confluence.json.viewer.plugins:json-viewer-resources/images/json-icon.png"
+                ]
+            },
+            "1211273": {
+                "name": "Community Forums for Confluence",
+                "vendor": "Kolekti (part of The Adaptavist Group)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211273",
+                "urls": []
+            },
+            "1213321": {
+                "name": "Tooltips",
+                "vendor": "M20 Technology LLC",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213321",
+                "urls": []
+            },
+            "1215055": {
+                "name": "Slack for Confluence - Chat, Notification, Questions",
+                "vendor": "codefortynine",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215055",
+                "urls": [
+                    "/download/resources/com.madein49.slack-for-confluence/icons/slack-for-confluence-16.png"
+                ]
+            },
+            "1213333": {
+                "name": "PDF Macros for Confluence",
+                "vendor": "TNG Technology Consulting GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213333",
+                "urls": [
+                    "/download/resources/com.tngtech.confluence.plugins.pdfmacros:pdfmacros-resources/assets/pluginLogo.png"
+                ]
+            },
+            "1211696": {
+                "name": "Linchpin User Profiles",
+                "vendor": "Seibert Media",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211696",
+                "urls": [
+                    "/download/resources/net.seibertmedia.plugin.confluence.cup/pluginLogo.png",
+                    "/download/resources/net.seibertmedia.plugin.confluence.cup/orgchart-macro.png",
+                    "/download/resources/net.seibertmedia.plugin.confluence.cup/structure-chart-macro.png",
+                    "/download/resources/net.seibertmedia.plugin.confluence.cup/people-search-list-macro.png",
+                    "/download/resources/net.seibertmedia.plugin.confluence.cup/user-list-macro.png",
+                    "/download/resources/net.seibertmedia.plugin.confluence.cup/user-search-macro.png",
+                    "/download/resources/net.seibertmedia.plugin.confluence.cup/my-contacts-macro.png"
+                ]
+            },
+            "1212110": {
+                "name": "Label Manager for Confluence",
+                "vendor": "Köstebek Teknoloji",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212110",
+                "urls": []
+            },
+            "1214144": {
+                "name": "Jupyter Viewer for Confluence",
+                "vendor": "Mibex Software GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214144",
+                "urls": [
+                    "/download/resources/ch.mibex.confluence.ipython-notebook/images/macro-logo.png"
+                ]
+            },
+            "1215278": {
+                "name": "User Management For Confluence | Licence Management Software",
+                "vendor": "TechTime Initiative Group Limited",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215278",
+                "urls": []
+            },
+            "152": {
+                "name": "Cache for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/152",
+                "urls": [
+                    "/download/resources/org.swift.confluence.cache/img/cache-80x80.png"
+                ]
+            },
+            "1222792": {
+                "name": "Mermaid Integration for Confluence",
+                "vendor": "Toshihiro Sato",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1222792",
+                "urls": [
+                    "/download/resources/com.linhtechnology.mermaid:mermaid-app-image/images/macro-icon.png"
+                ]
+            },
+            "1216218": {
+                "name": "SoftComply eQMS - Compliant QMS Documentation",
+                "vendor": "SoftComply",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216218",
+                "urls": [
+                    "/download/resources/ee.softcomply.qms.confluence-blueprints/images/vendorLogo.png"
+                ]
+            },
+            "1213922": {
+                "name": "Slide Presenter for Confluence",
+                "vendor": "addcraft GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213922",
+                "urls": [
+                    "/download/resources/de.incloud.confluence.presenter:resources-general/assets/static/images/logo-64.png"
+                ]
+            },
+            "1218865": {
+                "name": "Advanced Content Navigator - Filter Pages, Changes, Statuses",
+                "vendor": "META-INF KFT",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218865",
+                "urls": [
+                    "/download/resources/hu.metainf.plugin.confluence.advanced-children-display-for-confluence/icons/plugin-logo.png"
+                ]
+            },
+            "1216169": {
+                "name": "See All Unresolved Comments",
+                "vendor": "StreamlineSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216169",
+                "urls": []
+            },
+            "1211616": {
+                "name": "Scroll Translations for Confluence",
+                "vendor": "K15t",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211616",
+                "urls": []
+            },
+            "1212583": {
+                "name": "Easy SSO (Confluence) Kerberos/NTLM/SAML",
+                "vendor": "TechTime Initiative Group Limited",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212583",
+                "urls": []
+            },
+            "978531": {
+                "name": "Talk - Advanced Inline Comments",
+                "vendor": "Stiltsoft Europe OÜ",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/978531",
+                "urls": [
+                    "/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin/images/macro-icon-80.png"
+                ]
+            },
+            "582508": {
+                "name": "Tag Cloud for Confluence",
+                "vendor": "TNG Technology Consulting GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/582508",
+                "urls": [
+                    "/download/resources/com.tngtech.confluence.plugin.tagcloud/images/pluginLogo.png",
+                    "/download/resources/com.siemens.confluence.tagcloud/images/pluginLogo.png"
+                ]
+            },
+            "1221328": {
+                "name": "mO Two Factor Authentication (2FA) for Confluence",
+                "vendor": "miniOrange",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221328",
+                "urls": []
+            },
+            "1218015": {
+                "name": "Prometheus Exporter PRO for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218015",
+                "urls": []
+            },
+            "1215396": {
+                "name": "Linchpin Enterprise News",
+                "vendor": "Seibert Media",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215396",
+                "urls": [
+                    "/download/resources/net.seibertmedia.confluence.enterprise-news-bundle/corporate-news-feed-icon.png",
+                    "/download/resources/net.seibertmedia.confluence.enterprise-news-bundle/cover-stories-icon.png",
+                    "/download/resources/net.seibertmedia.confluence.enterprise-news-bundle/personal-news-feed-icon.png",
+                    "/download/resources/net.seibertmedia.confluence.enterprise-news-bundle/web-feed-icon.png",
+                    "/download/resources/net.seibertmedia.confluence.enterprise-news-bundle/news-teaser-icon.png",
+                    "/download/resources/net.seibertmedia.confluence.enterprise-news-bundle/spaces-by-label-icon.png"
+                ]
+            },
+            "1218474": {
+                "name": "Compliance for Confluence - DLP, Classification & Detection",
+                "vendor": "AppFox",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218474",
+                "urls": [
+                    "/download/resources/co.uk.jackgraves.classification.server-classification:icon-resources/pluginLogo.png"
+                ]
+            },
+            "1215126": {
+                "name": "Language Manager",
+                "vendor": "Seibert Media",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215126",
+                "urls": []
+            },
+            "1212933": {
+                "name": "Simple Cite",
+                "vendor": "Purde Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212933",
+                "urls": [
+                    "/download/resources/de.edrup.confluence.plugins.simple-cite/images/single_cite.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-cite/images/short_cite.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-cite/images/bibtex_cite.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-cite/images/bibtex_cite_link.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-cite/images/cite_import.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-cite/images/doi_cite.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-cite/images/cite_summary.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-cite/images/space_cite_summary.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-cite/images/bibtex_listing.png"
+                ]
+            },
+            "1224619": {
+                "name": "Dashboard Hub for Confluence - Charts, Reports, Redirections",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1224619",
+                "urls": [
+                    "/download/resources/com.roninpixels.dashboards.confluence:dh-main-resources/images/logos/dh_logo.png"
+                ]
+            },
+            "1211075": {
+                "name": "Sketch for Confluence - Image Editing",
+                "vendor": "TeamOps FACTORY (Solumiss Group)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211075",
+                "urls": []
+            },
+            "1221278": {
+                "name": "User Export for Confluence",
+                "vendor": "Aety admin apps",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221278",
+                "urls": []
+            },
+            "1223149": {
+                "name": "Azure DevOps Confluence Connector",
+                "vendor": "Move Work Forward",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1223149",
+                "urls": [
+                    "/download/resources/azure-devops-confluence-integration/images/pluginIcon.png"
+                ]
+            },
+            "1212925": {
+                "name": "Easy Forms for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212925",
+                "urls": []
+            },
+            "1217690": {
+                "name": "Smart Questions and Answers",
+                "vendor": "Purde Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217690",
+                "urls": [
+                    "/download/resources/de.edrup.confluence.plugins.simple-qa/images/simple_qa_logo.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-qa/images/simple_qa_export_logo.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-qa/images/simple_qa_statistics_logo.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-qa/images/simple_qa_side_content.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-qa/images/simple_qa_collection.png",
+                    "/download/resources/de.edrup.confluence.plugins.simple-qa/images/simple_qa_topic_list.png"
+                ]
+            },
+            "1219637": {
+                "name": "Watermark for Confluence",
+                "vendor": "DragonSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219637",
+                "urls": []
+            },
+            "41025": {
+                "name": "PlantUML for Confluence",
+                "vendor": "avono AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/41025",
+                "urls": [
+                    "/download/resources/de.griffel.confluence.plugins.plant-uml/icons/plantuml-macro-icon.png",
+                    "/download/resources/de.griffel.confluence.plugins.plant-uml/icons/plantumlrender-macro-icon.png",
+                    "/download/resources/de.griffel.confluence.plugins.plant-uml/icons/flowchart-macro-icon.png",
+                    "/download/resources/de.griffel.confluence.plugins.plant-uml/icons/flowchartrender-macro-icon.png",
+                    "/download/resources/de.griffel.confluence.plugins.plant-uml/icons/spacegraph-macro-icon.png",
+                    "/download/resources/de.griffel.confluence.plugins.plant-uml/icons/linkgraph-macro-icon.png",
+                    "/download/resources/de.griffel.confluence.plugins.plant-uml/icons/svg-macro-icon.png"
+                ]
+            },
+            "1221853": {
+                "name": "Polls, Votes, Surveys & Community Network for Confluence",
+                "vendor": "DevSamurai",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221853",
+                "urls": [
+                    "/download/resources/confluence-team-decision-addon/images/icon.png"
+                ]
+            },
+            "1211894": {
+                "name": "Ideation for Confluence",
+                "vendor": "VECTORS",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211894",
+                "urls": [
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.ideation/images/idea-home.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.ideation/images/idea-top.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.ideation/images/idea-summary.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.ideation/images/idea-infos.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.ideation/images/idea-vote.png"
+                ]
+            },
+            "1221038": {
+                "name": "Last Login Monitoring for Confluence",
+                "vendor": "Smateso GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221038",
+                "urls": []
+            },
+            "1217271": {
+                "name": "Inline Table Editing",
+                "vendor": "Actonic Products GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217271",
+                "urls": [
+                    "/download/resources/de.actonic.inline-table-editing/macro-images/ite-macro-icon.png"
+                ]
+            },
+            "1217507": {
+                "name": "Extender for Confluence",
+                "vendor": "it.Lab",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217507",
+                "urls": []
+            },
+            "154": {
+                "name": "Comala Lists",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/154",
+                "urls": [
+                    "/download/resources/com.comalatech.checklists/images/checklist-icon.png"
+                ]
+            },
+            "1212026": {
+                "name": "Rotate Images for Confluence",
+                "vendor": "TNG Technology Consulting GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212026",
+                "urls": []
+            },
+            "1211217": {
+                "name": "Numbered Captions",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211217",
+                "urls": [
+                    "/download/resources/com.tensixtwo.conf.numcapt:editorWebResource/images/insert_caption_80.png",
+                    "/download/resources/images/icon_16.png"
+                ]
+            },
+            "1216591": {
+                "name": "Box for Confluence",
+                "vendor": "Bilith Labs",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216591",
+                "urls": [
+                    "/download/resources/com.bilith.lref.confluence-box:img-resources/img/box/box_80x80.png"
+                ]
+            },
+            "1216602": {
+                "name": "Space Privacy - Extranet for Confluence",
+                "vendor": "Seibert Media",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216602",
+                "urls": [
+                    "/download/resources/net.seibertmedia.extranet.core/pluginLogo.png"
+                ]
+            },
+            "1221377": {
+                "name": "Easy Translator for Confluence",
+                "vendor": "EPS Software Engineering AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221377",
+                "urls": []
+            },
+            "133": {
+                "name": "Custom Space User Management (CSUM) for DC and Cloud",
+                "vendor": "The Plugin People",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/133",
+                "urls": []
+            },
+            "33286": {
+                "name": "InPlace Editor for Confluence",
+                "vendor": "Stiltsoft Europe OÜ",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/33286",
+                "urls": []
+            },
+            "1216054": {
+                "name": "Agile Retrospectives for Confluence",
+                "vendor": "Catapult Labs, LLC",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216054",
+                "urls": [
+                    "/download/resources/retrospectives4confluence:retrospective-resources1718756618229/images/icon-retros-setup.png"
+                ]
+            },
+            "1211907": {
+                "name": "Announcer for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211907",
+                "urls": []
+            },
+            "1213057": {
+                "name": "Lively Blogs for Confluence",
+                "vendor": "Lively Apps",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213057",
+                "urls": [
+                    "/download/resources/de.scandio.confluence.plugins.lively-blog/icon"
+                ]
+            },
+            "1215921": {
+                "name": "Easy Numbered Headings",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215921",
+                "urls": [
+                    "/download/resources/com.bolo.conf.numhead:web-resources/images/icon_80.png",
+                    "/download/resources/images/icon_16.png"
+                ]
+            },
+            "1212305": {
+                "name": "Linchpin Events",
+                "vendor": "Seibert Media",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212305",
+                "urls": [
+                    "/download/resources/net.seibertmedia.plugin.confluence.event-manager/event-macro-icon.png",
+                    "/download/resources/net.seibertmedia.plugin.confluence.event-manager/event-liste-macro-icon.png",
+                    "/download/resources/net.seibertmedia.plugin.confluence.event-manager/event-calendar-macro-icon.png"
+                ]
+            },
+            "1219041": {
+                "name": "Data Protection & Security Toolkit Confluence (DLP)",
+                "vendor": "Actonic Products GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219041",
+                "urls": []
+            },
+            "1223249": {
+                "name": "mailto.wiki - Email for Confluence",
+                "vendor": "CraftCoders",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1223249",
+                "urls": []
+            },
+            "1216286": {
+                "name": "Gitlab for Confluence",
+                "vendor": "Move Work Forward",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216286",
+                "urls": [
+                    "/download/resources/at.rumpelcoders.confluence.gitlab-api/images/Gitlab-logo.png"
+                ]
+            },
+            "1220378": {
+                "name": "Viable Issues - Create Jira Issues from Confluence",
+                "vendor": "Hagen Management",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220378",
+                "urls": []
+            },
+            "1212211": {
+                "name": "ConfiDoc. Viewer for SQL, XML, JSON, CSV",
+                "vendor": "Vertuna LLC",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212211",
+                "urls": [
+                    "/download/resources/com.vertuna.confluence.plugins.confirest:confidoc-resources/confidoc.png"
+                ]
+            },
+            "1216687": {
+                "name": "Twitter Connector for Confluence",
+                "vendor": "eXtensi",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216687",
+                "urls": [
+                    "/download/resources/io.extensi-confluence-plugin-twitter-connector/icons/twitterconnector-icon-16px.png",
+                    "/download/resources/io.extensi-confluence-plugin-twitter-connector/icons/twitterconnector-icon-80px.png"
+                ]
+            },
+            "1225000": {
+                "name": "Smart Images for Confluence",
+                "vendor": "Creativas",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1225000",
+                "urls": [
+                    "/download/resources/com.mute.confluence.plugins.images/images/logos/logo_80.png"
+                ]
+            },
+            "1215094": {
+                "name": "Page Assistant",
+                "vendor": "EliteSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215094",
+                "urls": []
+            },
+            "1222040": {
+                "name": "Airtable for Confluence",
+                "vendor": "CollabSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1222040",
+                "urls": [
+                    "/download/resources/app.airtables.confluence/images/icon.png"
+                ]
+            },
+            "1217328": {
+                "name": "Show Inline Comments in Editor",
+                "vendor": "Actonic Labs",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217328",
+                "urls": []
+            },
+            "1217644": {
+                "name": "Google Drive Connector for Confluence",
+                "vendor": "EliteSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217644",
+                "urls": [
+                    "/download/resources/com.elitesoftsp.confluence.google.drive.plugins:google-team-drive-connector-resources/images/drive-icon.png"
+                ]
+            },
+            "1219123": {
+                "name": "Smart Attachments for Confluence",
+                "vendor": "Stiltsoft Europe OÜ",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219123",
+                "urls": [
+                    "/download/resources/com.stiltsoft.confluence.smart-attachment-for-confluence/images/macro-folder-attachments.png"
+                ]
+            },
+            "1218275": {
+                "name": "Diary - Team Journal for Confluence",
+                "vendor": "Lively Apps",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218275",
+                "urls": [
+                    "/download/resources/de.scandio.confluence.plugins.diary/icon"
+                ]
+            },
+            "1217710": {
+                "name": "ToDo List for Confluence",
+                "vendor": "Ros Entertainment",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217710",
+                "urls": [
+                    "/download/resources/com.ros.confluence.ToDolist:images-resources/images/logo.png",
+                    "/download/resources/com.ros.confluence.ToDolist:images-resources/images/report-logo.png"
+                ]
+            },
+            "266": {
+                "name": "Scripting for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/266",
+                "urls": [
+                    "/download/resources/org.swift.confluence.script/img/scripting-80x80.png"
+                ]
+            },
+            "1211855": {
+                "name": "FAQ for Confluence",
+                "vendor": "VECTORS",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211855",
+                "urls": [
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.faq:faq-resources/images/faq-content.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.faq:faq-resources/images/faq-category.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.faq:faq-resources/images/faq-question.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.faq:faq-resources/images/faq-index.png"
+                ]
+            },
+            "1211141": {
+                "name": "XSD Viewer",
+                "vendor": "Avisi Apps bv",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211141",
+                "urls": [
+                    "/download/resources/nl.avisi.confluence.plugins.xsdviewer/icons/XSD_image_80.png",
+                    "/download/resources/nl.avisi.confluence.plugins.xsdviewer/icons/XSD_table_80.png"
+                ]
+            },
+            "1217068": {
+                "name": "Templates for Blog Posts for Confluence",
+                "vendor": "bitvoodoo ag",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217068",
+                "urls": [
+                ]
+            },
+            "226": {
+                "name": "Visio for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/226",
+                "urls": [
+                    "/download/resources/org.swift.confluence.visio/img/visio-80x80.png"
+                ]
+            },
+            "1217983": {
+                "name": "Email this Page",
+                "vendor": "DC Factory",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217983",
+                "urls": []
+            },
+            "1210826": {
+                "name": "Table Library for Bob Swift Add-ons",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1210826",
+                "urls": []
+            },
+            "1219786": {
+                "name": "Comments Manager",
+                "vendor": "BeastieHut",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219786",
+                "urls": [
+                    "/download/resources/com.bhut.space-comments-new-plugin.space-comments/images/bht_logo_80.png"
+                ]
+            },
+            "1221313": {
+                "name": "Edit Permission Inheritance",
+                "vendor": "Purde Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221313",
+                "urls": []
+            },
+            "1219233": {
+                "name": "Manage Inactive Users for Confluence",
+                "vendor": "ILA eSolution",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219233",
+                "urls": []
+            },
+            "1223006": {
+                "name": "DarkTheme for Confluence",
+                "vendor": "Maximilian Porzelt",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1223006",
+                "urls": []
+            },
+            "1211252": {
+                "name": "Enterprise Theme for Confluence",
+                "vendor": "bitvoodoo ag",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211252",
+                "urls": [
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/icon_macro_random_user.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/icon_macro_general.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/icon_macro_like.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-quicklink.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-events.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/icon_macro_space.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-manager.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/icon_macro_menu.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/icon_macro_lorem-ipsum.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-panel.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/icon_macro_recently_updated.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-iconfavpages.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/icon_macro_dropdown.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-tabs.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-add-page-or-blog.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-comments.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-page-labels.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-attachmentbox.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/icon_macro_stylesheet.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-language.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-blogposts.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-top-stories.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/icon_macro_images.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/macro-icon-attachments.png",
+                    "/download/resources/net.getunik.confluence.skin.core/img-core/icon_macro_space_shortcuts.png"
+                ]
+            },
+            "130": {
+                "name": "Macro Security for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/130",
+                "urls": [
+                    "/download/resources/org.swift.confluence.macrosecurity/img/macro-security-80x80.png"
+                ]
+            },
+            "1211012": {
+                "name": "Webfonts for Confluence",
+                "vendor": "TNG Technology Consulting GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211012",
+                "urls": [
+                    "/download/resources/com.tngtech.confluence.plugin.fonts/icon"
+                ]
+            },
+            "1218460": {
+                "name": "SonarQube Connector for Confluence",
+                "vendor": "excentia",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218460",
+                "urls": []
+            },
+            "1211159": {
+                "name": "Advanced Codeblocks for Confluence",
+                "vendor": "codeclou GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211159",
+                "urls": [
+                    "/download/resources/confluenceadvancedcodeblockplugin/images/advanced-codeblock-macro-80x80.png",
+                    "/download/resources/confluenceadvancedcodeblockplugin/images/advanced-remote-codeblock-macro-80x80.png"
+                ]
+            },
+            "1213261": {
+                "name": "Sequence Diagrams for Confluence",
+                "vendor": "O'Hara Group",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213261",
+                "urls": [
+                    "/download/resources/net.oharagroup.confluence.plugins.confluence-sequence-diagrams/images/sequenceDiagramIcon.png"
+                ]
+            },
+            "1217056": {
+                "name": "Canned Search for Confluence",
+                "vendor": "Akeles Consulting",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217056",
+                "urls": [
+                    "/download/resources/com.akeles.plugins.confluence.cqlSearchUtilities/icon/macro-icon.png"
+                ]
+            },
+            "1211298": {
+                "name": "Connector for Google Drive & Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211298",
+                "urls": [
+                    "/download/resources/net.customware.confluence.plugin.googledrive:drive-resources/images/drive-icon.png"
+                ]
+            },
+            "16985": {
+                "name": "Embed Google Maps Pro",
+                "vendor": "TechTime Initiative Group Limited",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/16985",
+                "urls": [
+                    "/download/resources/org.techtime.confluence.plugins.googlemapsembed/GoogleMapsEmbed_80_v2.png"
+                ]
+            },
+            "1210945": {
+                "name": "Spacetree for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1210945",
+                "urls": [
+                    "/download/resources/com.simplenia.confluence.plugins.spacetree/images/spacetree-macro.png"
+                ]
+            },
+            "274": {
+                "name": "ThemeBuilder for Confluence",
+                "vendor": "Kolekti (part of The Adaptavist Group)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/274",
+                "urls": []
+            },
+            "1219390": {
+                "name": "Duplicate Page Titles (Same Page Titles)",
+                "vendor": "DC Factory",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219390",
+                "urls": []
+            },
+            "1216783": {
+                "name": "Integration for Dropbox & Confluence",
+                "vendor": "Bilith Labs",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216783",
+                "urls": [
+                    "/download/resources/dropbox-confluence:img-resources/img/dropbox/dropbox_80x80.png"
+                ]
+            },
+            "1216992": {
+                "name": "Attachment Checker for Confluence",
+                "vendor": "Akeles Consulting",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216992",
+                "urls": []
+            },
+            "1215818": {
+                "name": "Issue Forms for Confluence",
+                "vendor": "evolu software GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215818",
+                "urls": [
+                    "/download/resources/com.aevolu.j.in.c:com-aevolu-j-in-c-resources/images/macroIssueForm.png",
+                    "/download/resources/com.aevolu.j.in.c:com-aevolu-j-in-c-resources/images/macroButtonbar.png",
+                    "/download/resources/com.aevolu.j.in.c:com-aevolu-j-in-c-resources/images/macroCaptcha.png",
+                    "/download/resources/com.aevolu.j.in.c:com-aevolu-j-in-c-resources/images/macroIssueField.png",
+                    "/download/resources/com.aevolu.j.in.c:com-aevolu-j-in-c-resources/images/macroIssueLabel.png",
+                    "/download/resources/com.aevolu.j.in.c:com-aevolu-j-in-c-resources/images/macroIssueFormDetails.png"
+                ]
+            },
+            "1217921": {
+                "name": "Announcement Banner for Confluence",
+                "vendor": "Sweet Bananas",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217921",
+                "urls": []
+            },
+            "1220359": {
+                "name": "2FA for Confluence: U2F & TOTP",
+                "vendor": "Alpha Serve (a Tempo Software company)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220359",
+                "urls": []
+            },
+            "1212655": {
+                "name": "CelesteCS Math for Confluence",
+                "vendor": "Celeste Creative Solutions",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212655",
+                "urls": [
+                    "/download/resources/com.celestecs.confluence.celestecs-math/images/Expression_Logo_72x72.png"
+                ]
+            },
+            "1221814": {
+                "name": "Easy Heading Navigation - Floating Table of Contents",
+                "vendor": "Shinetech Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221814",
+                "urls": []
+            },
+            "1216800": {
+                "name": "LaTeX Math for Confluence with Math Editor, TeXLive, ChatGPT",
+                "vendor": "Fulstech",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216800",
+                "urls": [
+                    "/download/resources/com.fulstech.confluence-latex/images/mathjax-macro.png",
+                    "/download/resources/com.fulstech.confluence-latex/images/pluginIcon.png",
+                    "/download/resources/com.fulstech.confluence-latex/images/texlive-macro.png"
+                ]
+            },
+            "1219725": {
+                "name": "Digi formatting",
+                "vendor": "DigiXperience",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219725",
+                "urls": [
+                    "/download/resources/com.digixperience.atlassian.confluence.digi-formatting/images/digiformatting-steps.png",
+                    "/download/resources/com.digixperience.atlassian.confluence.digi-formatting/images/digiformatting-percentage.png",
+                    "/download/resources/com.digixperience.atlassian.confluence.digi-formatting/images/digiformatting-button.png",
+                    "/download/resources/com.digixperience.atlassian.confluence.digi-formatting/images/digiformatting-accordion.png"
+                ]
+            },
+            "1218995": {
+                "name": "STAGIL Navigation for Confluence - Menus, Themes and Search",
+                "vendor": "STAGIL / catworkx",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218995",
+                "urls": [
+                    "/download/resources/de.stagil.confluence.stagil-navigation-confluence:stagil-navigation-searchPagesConfigResources/images/search-pages-empty.svg"
+                ]
+            },
+            "1211116": {
+                "name": "Countdown Timer",
+                "vendor": "Akeles Consulting",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211116",
+                "urls": [
+                    "/download/resources/com.akelesconsulting.confluence.plugins.countdown/img/digits-big-icon.png"
+                ]
+            },
+            "1217666": {
+                "name": "Wrike for Confluence",
+                "vendor": "Bilith Labs",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217666",
+                "urls": [
+                    "/download/resources/wrike-confluence:img-resources/img/wrike/wrike_80x80.png"
+                ]
+            },
+            "1217859": {
+                "name": "InVision for Confluence",
+                "vendor": "InVision",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217859",
+                "urls": [
+                    "/download/resources/confluence-invisionapp-addon/images/InVision-icon-pink-64px.png"
+                ]
+            },
+            "1214491": {
+                "name": "Secure Login (2FA) - Confluence",
+                "vendor": "syracom AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214491",
+                "urls": []
+            },
+            "1220699": {
+                "name": "Google Calendar Agenda Macro",
+                "vendor": "Bilith (Google Workspace apps)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220699",
+                "urls": [
+                    "/download/resources/google-calendar-confluence:img-resources/img/gcal/gcal_80x80.png"
+                ]
+            },
+            "1211964": {
+                "name": "Microblogging for Confluence",
+                "vendor": "Seibert Media",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211964",
+                "urls": [
+                    "/download/resources/net.seibertmedia.plugin.confluence.microblog/pluginLogo.png"
+                ]
+            },
+            "1221608": {
+                "name": "API Token Authentication Confluence -Increased user security",
+                "vendor": "resolution Reichert Network Solutions GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221608",
+                "urls": []
+            },
+            "1215287": {
+                "name": "Live Input Macros",
+                "vendor": "KC Integrations",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215287",
+                "urls": [
+                    "/download/resources/net.kentcom.live-input-macros/images/lim-checkbox.png",
+                    "/download/resources/net.kentcom.live-input-macros/images/lim-datepicker.png",
+                    "/download/resources/net.kentcom.live-input-macros/images/lim-dropdown-multi.png",
+                    "/download/resources/net.kentcom.live-input-macros/images/lim-dropdown-cascade.png",
+                    "/download/resources/net.kentcom.live-input-macros/images/lim-dropdown.png",
+                    "/download/resources/net.kentcom.live-input-macros/images/lim-status.png",
+                    "/download/resources/net.kentcom.live-input-macros/images/lim-radio.png",
+                    "/download/resources/net.kentcom.live-input-macros/images/lim-table.png",
+                    "/download/resources/net.kentcom.live-input-macros/images/lim-text.png",
+                    "/download/resources/net.kentcom.live-input-macros/images/lim-text-input.png",
+                    "/download/resources/net.kentcom.live-input-macros/images/lim-feedback.png"
+                ]
+            },
+            "1220928": {
+                "name": "Rate.Me for Confluence",
+                "vendor": "Ros Entertainment",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220928",
+                "urls": [
+                    "/download/resources/com.ros.confluence.rate-me:images-resources/images/rate-me-logo.png"
+                ]
+            },
+            "1216767": {
+                "name": "Lively Theme - Lightweight Intranet for Confluence",
+                "vendor": "Lively Apps",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216767",
+                "urls": [
+                    "/download/resources/de.scandio.confluence.plugins.lively-theme/images/*.svg",
+                    "/download/resources/de.scandio.confluence.plugins.lively-theme/icon"
+                ]
+            },
+            "1212012": {
+                "name": "Discussion for Confluence",
+                "vendor": "VECTORS",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212012",
+                "urls": [
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.discussion:plugins.discussion-resources/images/discussion-list.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.discussion:plugins.discussion-resources/images/discussion-info.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.discussion:plugins.discussion-resources/images/discussion-summary.png",
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.discussion:plugins.discussion-resources/images/discussion-contributors.png"
+                ]
+            },
+            "16936": {
+                "name": "Instant Search for Confluence",
+                "vendor": "Precog Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/16936",
+                "urls": []
+            },
+            "1224261": {
+                "name": "Date Reminder for Confluence",
+                "vendor": "DragonSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1224261",
+                "urls": []
+            },
+            "1222226": {
+                "name": "Linchpin Essentials | Theme & Profiles",
+                "vendor": "Seibert Media",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1222226",
+                "urls": []
+            },
+            "1219843": {
+                "name": "Chinese Language Patch for Confluence",
+                "vendor": "Chinese Technical Support",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219843",
+                "urls": []
+            },
+            "1219030": {
+                "name": "dbView",
+                "vendor": "MustHave Technology",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219030",
+                "urls": []
+            },
+            "1211304": {
+                "name": "Secure Content for Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211304",
+                "urls": [
+                    "/download/resources/com.prcpo.confluence.plugins.secure-content-block/images/secure-content_thumb.png"
+                ]
+            },
+            "350103": {
+                "name": "Tableau for Confluence - Pro",
+                "vendor": "Modus  Create",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/350103",
+                "urls": [
+                    "/download/resources/tableau-plugin/images/pluginLogo.png"
+                ]
+            },
+            "1220389": {
+                "name": "Forum for Confluence",
+                "vendor": "Converton",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220389",
+                "urls": []
+            },
+            "1214285": {
+                "name": "Mail Page Scheduler & E-Mail Newsletter for Confluence",
+                "vendor": "Seibert Media - kencha",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214285",
+                "urls": []
+            },
+            "1213672": {
+                "name": "Delete Attachments (Statistics)",
+                "vendor": "Kupper Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213672",
+                "urls": []
+            },
+            "1212629": {
+                "name": "projectdoc Toolbox for Confluence",
+                "vendor": "smartics",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212629",
+                "urls": [
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/macro-icons/macro.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/macro-icons/macro.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/generic_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/caution_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/example_80x80.pn",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/version_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/deprecated_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/fault_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/pending_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/feedback_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/info_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/note_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/question_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/tip_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/warning_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/box-icons/references_80x80.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/macro-icons/macro.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-projectdoc-confluence/action-icons/generic-icon.png"
+                ]
+            },
+            "1213130": {
+                "name": "Blog, Page and Template Tools",
+                "vendor": "KC Integrations",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213130",
+                "urls": [
+                    "/download/resources/net.kentcom.confluence-blog-tools/images/blog.png",
+                    "/download/resources/net.kentcom.confluence-blog-tools/images/restricted.png"
+                ]
+            },
+            "1217478": {
+                "name": "Qron Calc Macro - Excel formula in table",
+                "vendor": "Kenputer",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217478",
+                "urls": [
+                    "/download/resources/calc-macro/macroIcon.png"
+                ]
+            },
+            "1216954": {
+                "name": "Page Tree Visualization-Confluence Tree Structure Automation",
+                "vendor": "EEA, part of BiQ Group",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216954",
+                "urls": [
+                    "/download/resources/sk.eea.confluence.macro.processmap.process-map/images/logo.png"
+                ]
+            },
+            "1210734": {
+                "name": "avono Read Confirmations for Confluence",
+                "vendor": "avono AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1210734",
+                "urls": [
+                    "/download/resources/avono-read-confirmation-plugin:images/icons/read-confirmation-plugin-icon.png"
+                ]
+            },
+            "843829": {
+                "name": "Run CLI Actions in Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/843829",
+                "urls": [
+                    "/download/resources/org.swift.confluence.acli/img/run-cli-80x80.png"
+                ]
+            },
+            "1213041": {
+                "name": "Redirect for Confluence",
+                "vendor": "bitvoodoo ag",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213041",
+                "urls": [
+                    "/download/resources/ch.bitvoodoo.confluence.plugins.homepageredirect/images/plugin-logo.png"
+                ]
+            },
+            "1217476": {
+                "name": "Find and Replace Utility Plugin",
+                "vendor": "Hivestone",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217476",
+                "urls": []
+            },
+            "1213392": {
+                "name": "Issue Macro from Jira to Confluence",
+                "vendor": "Capital City Consultants",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213392",
+                "urls": [
+                    "/download/resources/com.capitaladdons.confluence.plugin.macro.ca-jira-confluence-issue-macro/icons/jcim-logo-icon-1.png"
+                ]
+            },
+            "1217652": {
+                "name": "Content Status for Confluence",
+                "vendor": "VECTORS",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217652",
+                "urls": [
+                    "/download/resources/fr.spectrumgroupe.confluence.plugins.content-status/images/page-status.png"
+                ]
+            },
+            "1211910": {
+                "name": "Enterprise Password Policy - Confluence",
+                "vendor": "Deviniti",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211910",
+                "urls": []
+            },
+            "1220375": {
+                "name": "Inline Comments in the Editor",
+                "vendor": "K15t",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220375",
+                "urls": []
+            },
+            "1216556": {
+                "name": "ConfiTemplates - Smart Templates & Excerpts",
+                "vendor": "Vertuna LLC",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216556",
+                "urls": [
+                    "/download/resources/com.vertuna.confluence.plugins.smart-templates:smart-templates-resources/smart-templates-logo.png"
+                ]
+            },
+            "1221149": {
+                "name": "Aha! roadmaps for Confluence",
+                "vendor": "Aha! Labs Inc",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221149",
+                "urls": [
+                    "/download/resources/io.aha.confluence.ahaRoadmapsForConfluence/images/aha.png"
+                ]
+            },
+            "1213755": {
+                "name": "Macro usage",
+                "vendor": "Kupper Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213755",
+                "urls": []
+            },
+            "1217397": {
+                "name": "JSON Viewer Macro for Confluence",
+                "vendor": "view26 GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217397",
+                "urls": [
+                    "/download/resources/com.view26.macro.json.viewer.confluence:json-viewer-resources/images/jsonViewer.png"
+                ]
+            },
+            "1212963": {
+                "name": "Baselines for Confluence",
+                "vendor": "OBSS",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212963",
+                "urls": []
+            },
+            "1219513": {
+                "name": "Glossary - Terminology Manager",
+                "vendor": "W Knowledge",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219513",
+                "urls": [
+                    "/download/resources/com.wknowledge.atlassian.confluence.wglossary:glossary-term-resources/images/term-highlight-16.png",
+                    "/download/resources/com.wknowledge.atlassian.confluence.wglossary/images/glossaryLogo.png"
+                ]
+            },
+            "1221601": {
+                "name": "User Management - License & User Deactivator for Confluence",
+                "vendor": "resolution Reichert Network Solutions GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221601",
+                "urls": []
+            },
+            "1220508": {
+                "name": "iFinder Confluence Search",
+                "vendor": "IntraFind Software AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220508",
+                "urls": [
+                    "/download/resources/com.intrafind.plugin.confluence.universal-search/images/vendorLogo.png"
+                ]
+            },
+            "1219646": {
+                "name": "Task Manager for Confluence",
+                "vendor": "Rozdoum (part of The Adaptavist Group)",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219646",
+                "urls": [
+                    "/download/resources/ie.mile.task-manager/images/issue-list.png",
+                    "/download/resources/ie.mile.task-manager/images/create-issue.png"
+                ]
+            },
+            "1216074": {
+                "name": "Assets - Confluence Macro",
+                "vendor": "Atlassian",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216074",
+                "urls": [
+                    "/download/resources/com.riadalabs.confluence.plugins.insight-confluence/images/jsm-144x144.png"
+                ]
+            },
+            "1224482": {
+                "name": "Deactivate Inactive User/Bulk User Management for Confluence",
+                "vendor": "miniOrange",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1224482",
+                "urls": []
+            },
+            "1213952": {
+                "name": "Better Blogs for Confluence",
+                "vendor": "GLiNTECH - a Valiantys company",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213952",
+                "urls": []
+            },
+            "1223435": {
+                "name": "Page and Attachment Security Enhancer for Confluence",
+                "vendor": "DragonSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1223435",
+                "urls": []
+            },
+            "1224441": {
+                "name": "Format Painter for Confluence - Easy Text Formatting",
+                "vendor": "Softlist Sp. z o.o.",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1224441",
+                "urls": []
+            },
+            "1220894": {
+                "name": "Simple Checkout",
+                "vendor": "Purde Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220894",
+                "urls": []
+            },
+            "1218985": {
+                "name": "Purge Versions for Confluence",
+                "vendor": "ILA eSolution",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218985",
+                "urls": []
+            },
+            "1216915": {
+                "name": "Tooltip for Confluence",
+                "vendor": "EDAG Production Solutions GmbH & Co. KG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216915",
+                "urls": [
+                    "/download/resources/com.edagps.atlassian.confluence.tooltip/images/tooltip-icon_80.png"
+                ]
+            },
+            "1212262": {
+                "name": "Project Documentation Macros",
+                "vendor": "smartics",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1212262",
+                "urls": [
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-atlassian-confluence-macros/macro-icons/projectdoc-definition-list.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-atlassian-confluence-macros/macro-icons/projectdoc-hide.png",
+                    "/download/resources/de.smartics.atlassian.confluence.smartics-atlassian-confluence-macros/macro-icons/projectdoc-section.png"
+                ]
+            },
+            "1220644": {
+                "name": "Advanced Image Gallery & Slider for Confluence",
+                "vendor": "XALT Business Consulting GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220644",
+                "urls": [
+                    "/download/resources/de.xalt.confluence.plugins.advanced-gallery-macro/icons/image_gallery_logo.png"
+                ]
+            },
+            "1225053": {
+                "name": "WeCom (WeChat Work) for Confluence",
+                "vendor": "DragonSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1225053",
+                "urls": []
+            },
+            "1211191": {
+                "name": "Content Scheduler for Confluence",
+                "vendor": "bitvoodoo ag",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211191",
+                "urls": []
+            },
+            "1220787": {
+                "name": "Attachment Boxes",
+                "vendor": "Purde Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220787",
+                "urls": [
+                    "/download/resources/de.edrup.confluence.plugins.attachment-boxes/images/attachment-boxes-macro-icon.png"
+                ]
+            },
+            "1215804": {
+                "name": "Git Snippets - Smart Git Viewer for Confluence",
+                "vendor": "Lively Apps",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215804",
+                "urls": [
+                    "/download/resources/de.scandio.confluence.plugins.live-snippets/icon"
+                ]
+            },
+            "1215047": {
+                "name": "Spellproof - Confluence Spell Checker",
+                "vendor": "Bunney Apps",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215047",
+                "urls": []
+            },
+            "1221237": {
+                "name": "Advanced Roadmaps for Jira in Confluence",
+                "vendor": "Atlassian",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221237",
+                "urls": [
+                    "/download/resources/com.atlassian.jpos.confluencemacro.portfolio-sever-confluence-macro/images/pluginLogo.png"
+                ]
+            },
+            "1217026": {
+                "name": "STAGIL Tasks & Issues - Boards & Tables for ToDo Checklists",
+                "vendor": "STAGIL / catworkx",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217026",
+                "urls": [
+                    "/download/resources/de.stagil.confluence.stagil-issues-macro/images/SIFC_Product-Logo_144x144.png"
+                ]
+            },
+            "1218564": {
+                "name": "Auto Purge Trash",
+                "vendor": "ILA eSolution",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218564",
+                "urls": []
+            },
+            "1219918": {
+                "name": "Fast User Switcher (FUS) for Confluence",
+                "vendor": "Actonic Labs",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219918",
+                "urls": []
+            },
+            "1220186": {
+                "name": "Confluence Data Center for Slack (Official)",
+                "vendor": "Atlassian",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220186",
+                "urls": []
+            },
+            "1213931": {
+                "name": "Brikit Targeted Search for Confluence",
+                "vendor": "Brikit",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213931",
+                "urls": [
+                    "/download/resources/com.brikit.targetedsearch/images/icons/targeted-search-macro.png"
+                ]
+            },
+            "1211482": {
+                "name": "Expando for Confluence FREE",
+                "vendor": "K15t Labs",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1211482",
+                "urls": []
+            },
+            "1216438": {
+                "name": "Responsive tabs",
+                "vendor": "Kupper Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1216438",
+                "urls": [
+                    "/download/resources/de.kupper.it.atlassian.confluence.tabs/images/tabsLogo.png"
+                ]
+            },
+            "1215243": {
+                "name": "Confluence Helper for Structure",
+                "vendor": "Tempo Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215243",
+                "urls": []
+            },
+            "1214138": {
+                "name": "Auditor for Confluence",
+                "vendor": "Enhancera, LLC",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214138",
+                "urls": []
+            },
+            "1213679": {
+                "name": "Duplicate Content Defender",
+                "vendor": "Seibert Media",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213679",
+                "urls": []
+            },
+            "1222503": {
+                "name": "Tooltip Professional for Confluence",
+                "vendor": "EDAG Production Solutions GmbH & Co. KG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1222503",
+                "urls": [
+                    "/download/resources/com.edagps.atlassian.confluence.tooltip-pro/images/tooltip-icon_80.png"
+                ]
+            },
+            "1214225": {
+                "name": "qr2page - Printable QR Codes for Pages",
+                "vendor": "Seibert Media - coderay",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1214225",
+                "urls": []
+            },
+            "1218849": {
+                "name": "Team Admin - Space Group Management for Confluence",
+                "vendor": "Lively Apps",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218849",
+                "urls": []
+            },
+            "1219000": {
+                "name": "Advanced spaces list (Statistics)",
+                "vendor": "DigiXperience",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219000",
+                "urls": []
+            },
+            "1224924": {
+                "name": "Data Forms for Confluence",
+                "vendor": "evolu software GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1224924",
+                "urls": [
+                    "/download/resources/software.evolu.dataforms-confluence-server:dataforms-marco-resources/images/dataforms-view.png",
+                    "/download/resources/software.evolu.dataforms-confluence-server:dataforms-marco-resources/images/dataforms-table.png",
+                    "/download/resources/software.evolu.dataforms-confluence-server:dataforms-marco-resources/images/dataforms-view-single.png"
+                ]
+            },
+            "1221533": {
+                "name": "Process Management Suite for Confluence",
+                "vendor": "Communardo Products GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221533",
+                "urls": [
+                    "/download/resources/de.communardo.confluence.communardo.qms.plugin/images/icon/macro/approval-print-metadata-macro-icon.png",
+                    "/download/resources/de.communardo.confluence.communardo.qms.plugin/images/icon/macro/no-print-macro-icon.png",
+                    "/download/resources/de.communardo.confluence.communardo.qms.plugin/images/icon/macro/my-tasks-macro-icon.png",
+                    "/download/resources/de.communardo.confluence.communardo.qms.plugin/images/icon/macro/display-process-comments-macro-icon.png",
+                    "/download/resources/de.communardo.confluence.communardo.qms.plugin/images/icon/macro/process-search-macro-icon.png",
+                    "/download/resources/de.communardo.confluence.communardo.qms.plugin/images/icon/macro/page-id-macro-icon.png",
+                    "/download/resources/de.communardo.confluence.communardo.qms.plugin/images/icon/macro/applicable-documents-macro-icon.png",
+                    "/download/resources/de.communardo.confluence.communardo.qms.plugin/images/icon/macro/contact-person-macro-icon.png"
+                ]
+            },
+            "1219909": {
+                "name": "SAP LeanIX for Confluence",
+                "vendor": "SAP LeanIX",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219909",
+                "urls": [
+                    "/download/resources/net.leanix.confluence.leanix-for-confluence-server/images/leanixLogo.png"
+                ]
+            },
+            "1218691": {
+                "name": "Zephyr Scale Reporting for Confluence",
+                "vendor": "SmartBear",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218691",
+                "urls": [
+                    "/download/resources/com.adaptavist.tm4c:tm4c-images-resources/images/tm4c-icon.svg            ",
+                    "/download/resources/com.adaptavist.tm4c:tm4c-images-resources/images/donut.png",
+                    "/download/resources/com.adaptavist.tm4c:tm4c-images-resources/images/bar-line.png",
+                    "/download/resources/com.adaptavist.tm4c:tm4c-images-resources/images/bar-horizontal.png",
+                    "/download/resources/com.adaptavist.tm4c:tm4c-images-resources/images/line.png",
+                    "/download/resources/com.adaptavist.tm4c:tm4c-images-resources/images/scorecard.png",
+                    "/download/resources/com.adaptavist.tm4c:tm4c-images-resources/images/table.png",
+                    "/download/resources/com.adaptavist.tm4c:tm4c-images-resources/images/list.png"
+                ]
+            },
+            "1220066": {
+                "name": "Permission Helper",
+                "vendor": "Kupper Software",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1220066",
+                "urls": [
+                    "/download/resources/de.kupper.it.atlassian.confluence.permission-helper/images/permission-helper-logo.png"
+                ]
+            },
+            "1217917": {
+                "name": "Page Branching for Confluence",
+                "vendor": "Lively Apps",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217917",
+                "urls": [
+                    "/download/resources/de.scandio.confluence.plugins.page-branching/icon"
+                ]
+            },
+            "1224226": {
+                "name": "Jcreate - Requirements Management in Confluence and Jira",
+                "vendor": "Methoda",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1224226",
+                "urls": [
+                    "/download/resources/com.methoda.plugins.jcreate/icons/pluginLogo.jpg"
+                ]
+            },
+            "1222394": {
+                "name": "mO Confluence SCIM User Provisioning | Confluence User Sync",
+                "vendor": "miniOrange",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1222394",
+                "urls": []
+            },
+            "1223430": {
+                "name": "Adobe XD for Confluence",
+                "vendor": "CollabSoft",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1223430",
+                "urls": [
+                    "/download/resources/app.adobexd.confluence/images/icon.png"
+                ]
+            },
+            "1215578": {
+                "name": "Linchpin Launchpad - Access Your Tools",
+                "vendor": "Seibert Media",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215578",
+                "urls": [
+                    "/download/resources/net.seibertmedia.confluence.appcenter/plugin-logo.png"
+                ]
+            },
+            "1218116": {
+                "name": "Copy Page Hierarchy (Copy Space)",
+                "vendor": "Hivestone",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218116",
+                "urls": []
+            },
+            "1219286": {
+                "name": "Auto Numbered Headings",
+                "vendor": "Hivestone",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219286",
+                "urls": []
+            },
+            "1218214": {
+                "name": "ONLYOFFICE Connector for Confluence",
+                "vendor": "Ascensio System SIA",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218214",
+                "urls": [
+                    "/download/resources/onlyoffice.onlyoffice-confluence-plugin/images/preview-macros-logo.png",
+                    "/download/resources/onlyoffice.onlyoffice-confluence-plugin:onlyoffice-confluence-plugin-resources-filecreate/16.svg"
+                ]
+            },
+            "1218332": {
+                "name": "Delete Unused Attachments",
+                "vendor": "Hivestone",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218332",
+                "urls": []
+            },
+            "1218507": {
+                "name": "Labels Restrict",
+                "vendor": "SoftCrts",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218507",
+                "urls": []
+            },
+            "1217225": {
+                "name": "Collapsible Admin Menu",
+                "vendor": "Seibert Media",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217225",
+                "urls": []
+            },
+            "1219400": {
+                "name": "User Sync: SCIM Provisioning, User & Group Sync - Confluence",
+                "vendor": "resolution Reichert Network Solutions GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1219400",
+                "urls": []
+            },
+            "1215163": {
+                "name": "Delegated Group Management in Confluence",
+                "vendor": "Appfire",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1215163",
+                "urls": []
+            },
+            "1218626": {
+                "name": "Space Fields for Confluence",
+                "vendor": "ILA eSolution",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218626",
+                "urls": [
+                    "/download/resources/com.tse.confluence.spaceproperties.plugin.confluence-space-properties-plugin:confluence-space-properties-plugin-resources/images/scmenthusiast.png"
+                ]
+            },
+            "1223048": {
+                "name": "Axure for Confluence",
+                "vendor": "Axure",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1223048",
+                "urls": []
+            },
+            "1210994": {
+                "name": "Teamworkx Revision for Confluence",
+                "vendor": "catworkx GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1210994",
+                "urls": [
+                    "/download/resources/de.catworkx.confluence.plugins.catworkx-revision/marketplace/plugin-logo.png",
+                    "/download/resources/de.catworkx.confluence.plugins.catworkx-revision/marketplace/plugin-icon.png"
+                ]
+            },
+            "1221018": {
+                "name": "Page Reminders for Confluence",
+                "vendor": "KC Integrations",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221018",
+                "urls": []
+            },
+            "1217620": {
+                "name": "Conditional Multiexcerpt",
+                "vendor": "Hivestone",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217620",
+                "urls": []
+            },
+            "1223302": {
+                "name": "Managed Data Fields",
+                "vendor": "viadee Unternehmensberatung AG",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1223302",
+                "urls": [
+                    "/download/resources/de.viadee.confluence.managed-data-fields/images/logo-MDF.png"
+                ]
+            },
+            "1218509": {
+                "name": "S/Notify Email Encryption for Confluence",
+                "vendor": "savignano software solutions",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218509",
+                "urls": []
+            },
+            "1223255": {
+                "name": "Viable States - Status Dropdown",
+                "vendor": "Hagen Management",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1223255",
+                "urls": [
+                    "/download/resources/at.craftworks.confluence.stateswapper.state-swapper/images/macro.png"
+                ]
+            },
+            "1218164": {
+                "name": "Link Shortener & URL Redirects for Confluence",
+                "vendor": "resolution Reichert Network Solutions GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1218164",
+                "urls": []
+            },
+            "1213437": {
+                "name": "Accessibility for Confluence",
+                "vendor": "Communardo Products GmbH",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1213437",
+                "urls": []
+            },
+            "1217990": {
+                "name": "RY Testing and Compliance",
+                "vendor": "Requirement Yogi",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1217990",
+                "urls": [
+                    "/download/resources/com.playsql.rytestcompliance/img/compliance-v3-72px-simple.png",
+                    "/download/resources/com.playsql.rytestcompliance/img/compliance-v3-svg-simple.svg",
+                    "/download/resources/com.playsql.rytestcompliance/img/stop-16x.png"
+                ]
+            },
+            "1221350": {
+                "name": "API Tokens for Confluence",
+                "vendor": "Wombats Corp",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221350",
+                "urls": []
+            },
+            "1221114": {
+                "name": "Barcodes for Confluence",
+                "vendor": "codalyx",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221114",
+                "urls": []
+            },
+            "1221019": {
+                "name": "Prolaborate",
+                "vendor": "Sparx Systems Prolaborate",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1221019",
+                "urls": []
+            },
+            "1222724": {
+                "name": "Access Log for Confluence",
+                "vendor": "Enhancera, LLC",
+                "marketplace_url": "https://marketplace.atlassian.com/apps/1222724",
+                "urls": []
+            }
+        }
+    }
+}

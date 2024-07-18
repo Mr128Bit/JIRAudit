@@ -2,8 +2,8 @@ HOSTS = ["*"]
 
 ############### AUTHENTICATION ###############
 
-#JIRA_USER = "admin"
-#JIRA_PASSWORD = "password"
+#USER = "admin"
+#PASSWORD = "password"
 
 ########### SCORING CONFIGURATION ############
 
@@ -36,5 +36,5 @@ VULNERABILITIES_FOUND = {
 ################# COMPONENTS #################
 
 EXPOSED_SENSITIVE_DATA = -10  # should be negative or 0
-
+ENDPOINT_VULNERABLE = -15 
 ##############################################

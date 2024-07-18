@@ -11,14 +11,15 @@ import json
 import uuid
 
 import urllib3
-
+from packaging import version
 from settings import *  # pylint: disable=unused-wildcard-import wildcard-import
 from score.Manager import *  # pylint: disable=unused-wildcard-import wildcard-import
 from misc.Color import Color
-from jira_api.marketplace_api.Plugin import *  # pylint: disable=unused-wildcard-import wildcard-import
-from jira_api.JiraAPI import JiraRequestException
+from misc.Types import AppType
+from apis.marketplace_api.Plugin import *  # pylint: disable=unused-wildcard-import wildcard-import
+from apis.jira_api.JiraAPI import JiraRequestException
 from cve_utils.cve_utils import *  # pylint: disable=unused-wildcard-import wildcard-import
-
+from bs4 import BeautifulSoup
 from PluginManager import PluginManager
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -47,7 +48,7 @@ class AuditInit:  # pylint: disable=too-few-public-methods
         return wrapper
 
     def __call__(self, *args, **kwargs):
-        # Da dies der direkt aufrufbare Teil ist, wende init_audit() an
+        # Da dies der direkt Aufrufbare Teil ist, wende init_audit() an
         instance = args[0]
         if not instance.AUDIT_MODE:
             instance.init_audit()
@@ -66,7 +67,7 @@ class Authenticated:  # pylint: disable=too-few-public-methods
 
     def __get__(self, instance, owner):
         def wrapper(*args, **kwargs):
-            if not instance.JIRA_API.authenticated:
+            if not instance.API.authenticated:
                 logging.error(
                     "Called method which requires authentication but authentication was not successful. Stopped execution"
                 )
@@ -75,6 +76,93 @@ class Authenticated:  # pylint: disable=too-few-public-methods
 
         return wrapper
 
+class PlatformOnly:
+    def __init__(self, *app_types: AppType):
+        self.app_types = app_types
+
+    def __call__(self, method):
+        def wrapper(instance, *args, **kwargs):
+            if instance.APP_TYPE not in self.app_types:
+                logging.error(
+                    f"Called function for type/s [{','.join([at.value for at in self.app_types])}] but host is {instance.APP_TYPE.value}. Stopped execution"
+                )
+                return None
+            return method(instance, *args, **kwargs)
+        return wrapper
+
+
+class JiraOnly:  # pylint: disable=too-few-public-methods
+    """
+    A decorator class for initializing audits.
+    Every audit should have a unique ID and configuration with meta information.
+    All methods that save audit data should use this decorator to ensure the presence of a results file.
+    """
+
+    def __init__(self, method):
+        self.method = method
+
+    def __get__(self, instance, owner):
+        def wrapper(*args, **kwargs):
+            if not instance.APP_TYPE == AppType.JIRA:
+                logging.error(
+                    "Called JiraOnly function but host is no Jira instance. Stopped execution"
+                )
+                return None
+            return self.method(instance, *args, **kwargs)
+
+        return wrapper
+
+class ConfluenceOnly:  # pylint: disable=too-few-public-methods
+    """
+    A decorator class for initializing audits.
+    Every audit should have a unique ID and configuration with meta information.
+    All methods that save audit data should use this decorator to ensure the presence of a results file.
+    """
+
+    def __init__(self, method):
+        self.method = method
+
+    def __get__(self, instance, owner):
+        def wrapper(*args, **kwargs):
+            if not instance.APP_TYPE == AppType.JIRA:
+                logging.error(
+                    "Called ConfluenceOnly function but host is no Confluence instance. Stopped execution"
+                )
+                return None
+            return self.method(instance, *args, **kwargs)
+
+        return wrapper
+
+class JiraConfluenceOnly:  # pylint: disable=too-few-public-methods
+    """
+    A decorator class for initializing audits.
+    Every audit should have a unique ID and configuration with meta information.
+    All methods that save audit data should use this decorator to ensure the presence of a results file.
+    """
+
+    def __init__(self, method):
+        self.method = method
+
+    def __get__(self, instance, owner):
+        def wrapper(*args, **kwargs):
+            if not instance.APP_TYPE in (AppType.JIRA, AppType.CONFLUENCE):
+                logging.error(
+                    "Called JiraConfluenceOnly Function but host is no Confluence or Jira instance. Stopped execution"
+                )
+                return None
+            return self.method(instance, *args, **kwargs)
+
+        return wrapper
+
+def is_version_affected(affected_version, fix_version, current_version):
+    affected_ver = version.parse(affected_version)
+    fix_ver = version.parse(fix_version)
+    current_ver = version.parse(current_version)
+    
+    if affected_ver <= current_ver < fix_ver:
+        return True
+    else:
+        return False
 
 class Auditor:  # pylint: disable=too-many-instance-attributes
     """
@@ -85,11 +173,13 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
     # TODO: maybe i should change the amount of attributes c;
     def __init__(  # pylint: disable=too-many-arguments
         self,
-        jira_api,
+        api,
         template,
         supported_databases,
         supported_jvm,
-        plugins_config,
+        jira_plugins_config,
+        confluence_plugins_config,
+        app_type,
         results_path=None,
         save_results=False,
         silent_mode=False,
@@ -113,14 +203,15 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
                 The path where results are stored
         """
         # TODO this shouldn't be None, requries check; will do later thiz
-        self.JIRA_API = jira_api
-        if not jira_api.authenticated:
-            jira_api.init_auth()
+        self.API = api
+        api.init_auth()
         self.TEMPLATE = template
         self.SUPPORTED_DATABASES = supported_databases
         self.SUPPORTED_JVM = supported_jvm
-        self.PLUGINS_CONFIG = plugins_config
+        self.JIRA_PLUGINS_CONFIG = jira_plugins_config
+        self.CONFLUENCE_PLUGINS_CONFIG = confluence_plugins_config
         self.AUDIT_MODE = False
+        self.APP_TYPE = app_type
         self.SILENT_MODE = silent_mode
         if results_path:
             self.RESULTS_PATH = Path(results_path)
@@ -141,11 +232,11 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
 
         data = {
             "execution_id": exec_id,
-            "host": self.JIRA_API.BASE_URL,
-            "exec_user": self.JIRA_API.USERNAME,
+            "host": self.API.BASE_URL,
+            "exec_user": self.API.USERNAME,
             "start": start_date,
             "end": "",
-            "authenticated": self.JIRA_API.authenticated,
+            "authenticated": self.API.authenticated,
         }
 
         self.update_results("meta", data)
@@ -163,7 +254,14 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
             data["end"] = end_date
             self.update_results("meta", data)
 
-        print(self.AUDIT_ID)
+        print(f"\n{self.AUDIT_ID}")
+
+    def _print_header(self, title: str):
+        sep = int((52 - len(title)) / 2)
+        self._print_msg("")
+        self._print_msg("_" * sep, f"[{title}]", "_" * sep)
+        self._print_msg("")
+
 
     def _print_msg(self, *args, **kwargs):
         """
@@ -237,7 +335,45 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
                 fpath,
                 osexc,
             )
+    @PlatformOnly(AppType.JIRA)
+    @AuditInit
+    def enum_applinks_unauthenticated(self) -> list:
+        self._print_header("APPLICATION LINKS")
 
+        response = None
+        result = []
+
+        try: 
+            response = requests.get(
+                f"{self.API.BASE_URL}/rest/menu/latest/appswitcher",
+                timeout=10,
+                verify=VERIFY_SSL
+            )
+        except Exception as e: # pylint: disable=broad-exception-caught
+            logging.error("User enumeration throw an exception: %s", e)
+        
+        if response and response.status_code == 200:
+
+            response = [e for e in response.json() if not e.get("self")]
+            
+            if not response:
+                self._print_msg(f"{Color.format('No application links found', Color.RED)}\n")
+
+            else:
+                for e in response:
+                    key = e.get("key")
+                    link = e.get("link")
+                    apptype = e.get("applicationType")
+                    self._print_msg("")
+                    self._print_msg("Key:\t", key)
+                    self._print_msg("Link:\t", link)
+                    self._print_msg("Type:\t", apptype)
+                    self._print_msg("")
+                    result.append((key, link, apptype))
+
+        return result
+
+    @PlatformOnly(AppType.JIRA)
     @AuditInit
     def enum_users_unauthenticated(self, user_list: list) -> list:
         """
@@ -255,42 +391,119 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
                 A list of existing users
         """
 
-        self._print_msg("\n\033[97m", "_" * 24, "[User Enum]", "_" * 24, "\033[00m\n")
+        self._print_header("USER ENUM")
 
         user_found = []
 
         for user in user_list:
             response = None
-
-            try:
+            found = False
+            
+            # https://jira.atlassian.com/browse/JRASERVER-69796
+            try: 
                 response = requests.get(
-                    f"{self.JIRA_API.BASE_URL}/secure/QueryComponent!Jql.jspa?jql=creator={user}",
+                    f"{self.API.BASE_URL}/rest/api/latest/groupuserpicker?query={user}&maxResults=50000",
                     timeout=10,
+                    verify=VERIFY_SSL
                 )
             except Exception as e: # pylint: disable=broad-exception-caught
                 logging.error("User enumeration throw an exception: %s", e)
-                return user_found
 
-            if response.status_code == 401:
-
+            if response.status_code == 200:
                 response = response.json()
-                error_msgs = response.get("errorMessages")
+                if response.get("users") and response.get("users").get("users") and len(response["users"]["users"]) > 0:
+                    found = True 
 
-                if error_msgs and "You are not authorized" in error_msgs[0]:
-                    user_found.append(user)
-                    self._print_msg(f"User found: {Color.format(user, Color.CYAN)}\n")
+            if not found:
+                # https://jira.atlassian.com/browse/JRASERVER-71559
+                try:
+                    response = requests.get(
+                        f"{self.API.BASE_URL}/secure/QueryComponentRendererValue!Default.jspa?assignee=user:{user}",
+                        timeout=10,
+                        verify=VERIFY_SSL
+                    )
+                except Exception as e: # pylint: disable=broad-exception-caught
+                    logging.error("User enumeration throw an exception: %s", e)
+
+                if response.status_code == 200:
+                    response = response.json()
+                    assignee = response.get("assignee")
+                    if assignee and assignee.get("viewHtml") and "An error occurred whilst rendering" not in assignee["viewHtml"]:
+                        found = True 
+
+            if not found:
+                # https://jira.atlassian.com/browse/JRASERVER-69242
+                try:
+                    response = requests.get(
+                        f"{self.API.BASE_URL}/rest/api/2/user/picker?query={user}",
+                        timeout=10,
+                        verify=VERIFY_SSL
+                    )
+                except Exception as e: # pylint: disable=broad-exception-caught
+                    logging.error("User enumeration throw an exception: %s", e)
+                
+                if response.status_code == 200:
+                    response = response.json()
+                    users = response.get("users")
+                    if users:
+                        found = True 
+
+            if not found:
+                # https://jira.atlassian.com/browse/JRASERVER-71560
+                try:
+                    response = requests.get(
+                        f"{self.API.BASE_URL}/ViewUserHover.jspa?username={user}",
+                        timeout=10,
+                        verify=VERIFY_SSL
+                    )
+                except Exception as e: # pylint: disable=broad-exception-caught
+                    logging.error("User enumeration throw an exception: %s", e)
+                
+                if response.status_code == 200:
+                    soup = BeautifulSoup(response.content, 'html.parser')
+                    user_details = soup.find('div', class_='user-hover-details')
+
+                    if user_details:
+                        user_text = user_details.find('h4').get_text(strip=True)
+
+                        if user_text == user:
+                            found = True
+            if not found:
+
+                # https://jira.atlassian.com/browse/JRASERVER-71536
+                try:
+                    response = requests.get(
+                        f"{self.API.BASE_URL}/secure/QueryComponent!Jql.jspa?jql=creator={user}",
+                        timeout=10,
+                        verify=VERIFY_SSL
+                    )
+                except Exception as e: # pylint: disable=broad-exception-caught
+                    logging.error("User enumeration throw an exception: %s", e)
+
+                if response and response.status_code == 401:
+
+                    response = response.json()
+                    error_msgs = response.get("errorMessages")
+
+                    if error_msgs and "You are not authorized" in error_msgs[0]:
+                        found = True
+        
+            if found:
+                self._print_msg(f"User found: {Color.format(user, Color.GREEN)}\n")
+                user_found.append(user)
 
         self.update_results("unauth_user_enum_found", user_found)
 
         return user_found
 
+    # Done
+    @JiraConfluenceOnly
     @AuditInit
     def enum_plugins_unauthenticated(self):
         """
         Enumerates the plugins without authentication
         """
-
-        pmanager = PluginManager(self.JIRA_API.BASE_URL, self.PLUGINS_CONFIG)
+        pmanager = PluginManager(self.API.BASE_URL, self.JIRA_PLUGINS_CONFIG, self.CONFLUENCE_PLUGINS_CONFIG, self.APP_TYPE)
 
         try:
             plugins = pmanager.enum_plugins_unauthenticated()
@@ -300,19 +513,19 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
 
         self.update_results("unauth_plugin_enumeration", plugins)
 
+    @JiraOnly
     @AuditInit
     def enum_issue_status_unauthenticated(self):
         """
         Enumerates the issue statuses without authentication
         TODO: implement rating
         """
-        self._print_msg(
-            "\n\033[97m", "_" * 19, "[Customfields]", "_" * 19, "\033[00m\n"
-        )
+        self._print_header("ISSUE STATUS")
+
 
         querycomponents = None
         try:
-            querycomponents = self.JIRA_API.get_status_unauthenticated()
+            querycomponents = self.API.get_status_unauthenticated()
         except JiraRequestException as exce:
             logging.error(
                 "Error while enumeration issue statuses: root cause: %s", exce
@@ -324,7 +537,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         if querycomponents:
             for qc in querycomponents:
                 self._print_msg(f"{Color.format('>', Color.CYAN)} {qc}")
-
+    # Done
     @Authenticated
     @AuditInit
     def enum_plugins_authenticated(self, check_versions: bool = False):
@@ -336,7 +549,8 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
                 check_versions (bool): If false, no version check will be performed
         """
 
-        self._print_msg("\n\033[97m", "_" * 24, "[Plugins]", "_" * 24, "\033[00m\n")
+        self._print_header("PLUGINS")
+
 
         if check_versions:
             self._print_msg(
@@ -346,7 +560,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         plugin_list = []
 
         try:
-            plugin_list = self.JIRA_API.get_plugins(check_versions)
+            plugin_list = self.API.get_plugins(check_versions)
         except JiraRequestException as exce:
             logging.error(
                 "An error occured while enumerating plugins: root cause: %s", exce
@@ -416,6 +630,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         plugin_infos["plugins"] = plugins
         self.update_results("plugins", plugin_infos)
 
+    @JiraConfluenceOnly
     @Authenticated
     @AuditInit
     def enum_personal_access_tokens(self):
@@ -423,18 +638,13 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         Enumerates personal access tokens in authenticated mode and rates the result
         """
 
-        self._print_msg(
-            f"\n{Color.PURPLE.value}",
-            "_" * 15,
-            "[Personal Access Tokens]",
-            "_" * 15,
-            f"{Color.ENDFORMAT.value}\n",
-        )
+        self._print_header("PERSONAL ACCESS TOKENS")
+
 
         pats = []
 
         try:
-            pats = self.JIRA_API.get_pats()
+            pats = self.API.get_pats()
         except JiraRequestException as exce:
             logging.error(
                 "An error occured while retrieving personal access tokens: root cause: %s",
@@ -480,6 +690,58 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
                     self.TEMPLATE.PAT_SCORE_EXPIRE, self.TEMPLATE.PAT_SCORE_EXPIRE
                 )
 
+    @JiraOnly
+    @AuditInit
+    def check_vulnerable_endpoints(self):
+        # < 7.3.5
+        # plugins/servlet/oauth/users/icon-uri?consumerUri=
+        response = None
+        self._print_header("VULNERABLE ENDPOINTS")
+
+        endpoint = "/plugins/servlet/oauth/users/icon-uri?consumerUri=https://google.com"
+
+        try: 
+            response = requests.get(
+                f"{self.API.BASE_URL}{endpoint}",
+                timeout=10,
+                verify=VERIFY_SSL
+            )
+        except Exception as e: # pylint: disable=broad-exception-caught
+            logging.error("User enumeration throw an exception: %s", e)
+
+        if response and response.status_code == 200:
+            prefix = Color.format(f"[BAD] [{self.TEMPLATE.ENDPOINT_VULNERABLE}]", Color.RED)
+            msg = f"Vulnerable endpoint detected: {endpoint}\n>>> CVE-2017-9506 | https://jira.atlassian.com/browse/JRASERVER-65862\n"
+            update_score(self.TEMPLATE.ENDPOINT_VULNERABLE, 0)
+        else:
+            prefix = Color.format(f"[GOOD] [+-0]", Color.GREEN)
+            msg = f"Endpoint '{endpoint}' is secure"
+
+        self._print_msg(prefix, msg)
+
+
+        endpoint = "/secure/ConfigurePortalPages!default.jspa?view=search&searchOwnerUserName=<script>alert(1)</script>&Search=Search"
+
+        try: 
+            response = requests.get(
+                f"{self.API.BASE_URL}{endpoint}",
+                timeout=10,
+                verify=VERIFY_SSL
+            )
+        except Exception as e: # pylint: disable=broad-exception-caught
+            logging.error("User enumeration throw an exception: %s", e)
+
+        if response and response.status_code == 200 and "<script>alert(1)</script>" in response.text:
+            prefix = Color.format(f"[BAD] [{self.TEMPLATE.ENDPOINT_VULNERABLE}]", Color.RED)
+            msg = f"Vulnerable endpoint detected: {endpoint}\n>>> CVE-2019-3402 | https://jira.atlassian.com/browse/JRASERVER-69243\n"
+            update_score(self.TEMPLATE.ENDPOINT_VULNERABLE, 0)
+        else:
+            prefix = Color.format(f"[GOOD] [+-0]", Color.GREEN)
+            msg = f"Endpoint '{endpoint}' is secure"
+        
+        self._print_msg(prefix, msg)
+
+    @JiraConfluenceOnly
     @AuditInit
     def check_exposed_sensitive_data(self): # pylint: disable=too-many-statements
         """
@@ -509,67 +771,65 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
 
             update_score(score, max_score)
 
-        self._print_msg(
-            "\n\033[97m", "_" * 19, "[Exposed Data]", "_" * 19, "\033[00m\n"
-        )
+        self._print_header("EXPOSED DATA")
 
         final_result = {"exposed_urls": []}
         result = None
 
         try:
-            result = self.JIRA_API.get_status_unauthenticated()
+            result = self.API.get_status_unauthenticated()
         except JiraRequestException as exce:
             logging.error(
                 "An error occured while retrieving issue statuses: root cause: %s", exce
             )
 
         if result:
-            final_result["exposed_urls"].append(self.JIRA_API.WEB_ENDPOINTS.QUERYCOMPONENT.value)
+            final_result["exposed_urls"].append(self.API.WEB_ENDPOINTS.QUERYCOMPONENT.value)
             final_result["status_enumeration"] = result
 
-            eval_result(self.JIRA_API.WEB_ENDPOINTS.QUERYCOMPONENT.value, True)
+            eval_result(self.API.WEB_ENDPOINTS.QUERYCOMPONENT.value, True)
             self._print_msg(Color.format("ATTENTION:", Color.RED), "Not securing this endpoint allows an attacker to enumerate usernames!")
             self._print_msg("More information:\thttps://jira.atlassian.com/browse/JRASERVER-71536\n")
             self._print_msg(Color.format("Found exposed issue status:", Color.YELLOW))
             self._print_msg(result)
         else:
-            eval_result(self.JIRA_API.WEB_ENDPOINTS.QUERYCOMPONENT.value, False)
+            eval_result(self.API.WEB_ENDPOINTS.QUERYCOMPONENT.value, False)
 
         # check dashboard exposure
 
         result = None
 
         try:
-            result = self.JIRA_API.get_filters_unauthenticated()
+            result = self.API.get_filters_unauthenticated()
         except JiraRequestException as exce:
             logging.error(
                 "An error occured while retrieving issue statuses: root cause: %s", exce
             )
 
         if result:
-            final_result["exposed_urls"].append(self.JIRA_API.WEB_ENDPOINTS.FILTERS.value)
+            final_result["exposed_urls"].append(self.API.WEB_ENDPOINTS.FILTERS.value)
             final_result["filter_enumeration"] = result
 
-            eval_result(self.JIRA_API.WEB_ENDPOINTS.FILTERS.value, True)
+            eval_result(self.API.WEB_ENDPOINTS.FILTERS.value, True)
             for filter_ in result:
                 self._print_msg("Filter:\t", Color.format(filter_[0], Color.CYAN))
                 self._print_msg("ID:\t", Color.format(filter_[1], Color.CYAN), "\n")
         else:
-            eval_result(self.JIRA_API.WEB_ENDPOINTS.FILTERS.value, False)
+            eval_result(self.API.WEB_ENDPOINTS.FILTERS.value, False)
 
         result = None
 
         try:
-            result = self.JIRA_API.get_dashboards_unauthenticated()
+            result = self.API.get_dashboards_unauthenticated()
         except JiraRequestException as exce:
             logging.error(
                 "An error occured while retrieving issue statuses: root cause: %s", exce
             )
 
         if result:
-            final_result["exposed_urls"].append(self.JIRA_API.API_ENDPOINTS.DASHBOARDS.value)
+            final_result["exposed_urls"].append(self.API.API_ENDPOINTS.DASHBOARDS.value)
             final_result["dashboard_enumeration"] = result
-            eval_result(self.JIRA_API.API_ENDPOINTS.DASHBOARDS.value, True)
+            eval_result(self.API.API_ENDPOINTS.DASHBOARDS.value, True)
 
             for dashboard in result:
                 did = dashboard.get("id")
@@ -581,10 +841,11 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
                 self._print_msg("URL:\t", Color.format(url, Color.CYAN), "\n")
 
         else:
-            eval_result(self.JIRA_API.API_ENDPOINTS.DASHBOARDS.value, False)
+            eval_result(self.API.API_ENDPOINTS.DASHBOARDS.value, False)
 
         self.update_results("exposed_sensitive_data_check", final_result)
 
+    @JiraConfluenceOnly
     @Authenticated
     @AuditInit
     def check_supported_platforms(
@@ -631,7 +892,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         meta = None
 
         try:
-            meta = self.JIRA_API.get_server_info()
+            meta = self.API.get_server_info()
         except JiraRequestException as exce:
             logging.error("Error while retrieving server info: root cause: %s", exce)
             return
@@ -657,7 +918,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         db_info = None
 
         try:
-            db_info = self.JIRA_API.get_database_info()
+            db_info = self.API.get_database_info()
         except JiraRequestException as exce:
             logging.error("Error while retrieving database info: root cause: %s", exce)
             return
@@ -665,7 +926,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         type_ = db_info.get("type")
         version = db_info.get("version")
 
-        if type_ == self.JIRA_API.DATABASE.POSTGRESQL:
+        if type_ == self.API.DATABASE.POSTGRESQL:
             version = version.split(".")[0]
 
             result = self.SUPPORTED_DATABASES[type_.value][version][jira_version]
@@ -693,7 +954,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         # get java info
 
         try:
-            jv_info = self.JIRA_API.get_jvm_info()
+            jv_info = self.API.get_jvm_info()
         except JiraRequestException as exce:
             logging.error("Error while retrieving jvm info: root cause: %s", exce)
             return
@@ -719,7 +980,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
             if clr:
 
                 jvm_type = "Oracle JRE/JDK"
-                if vendor == self.JIRA_API.JAVA_VENDOR.ADOPTOPENJDK:
+                if vendor == self.API.JAVA_VENDOR.ADOPTOPENJDK:
                     jvm_type = "Eclipse Temurin"
 
                 self._print_msg(
@@ -729,23 +990,46 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
 
         self.update_results("platforms", platforms)
 
+    @PlatformOnly(AppType.JIRA)
     @AuditInit
-    def check_cves(self, version: str):
+    def is_servicedesk_installed(self):
+        installed = False
+
+        if self.API.is_servicedesk_installed() and self.API.is_servicedesk_licensed():
+
+            self._print_msg(f"{Color.format('Jira Servicedesk is installed and licensed for use', Color.GREEN)}")
+            installed = True
+        else:
+            self._print_msg(f"{Color.format('Jira Servicedesk is not installed', Color.RED)}")
+        
+        self.update_results("servicedesk_installed", installed)
+        
+    # Done
+    @PlatformOnly(AppType.JIRA, AppType.CONFLUENCE)
+    @AuditInit
+    def check_cves(self):
         """
         Check for CVEs for a specific Jira version and updates the result
         """
 
-        self._print_msg(
-            f"\n{Color.RED.value}",
-            "_" * 20,
-            "[Vulnerabilities]",
-            "_" * 20,
-            f"{Color.ENDFORMAT.value}\n",
-        )
+        self._print_header("VULNERABILITIES")
 
-        jsd_version = self.JIRA_API.calculate_service_desk_version(version)
-        cves = get_cves(version, jira_sd_version=jsd_version)
+        cves = []
+        version = self.API.get_version()
 
+
+        if self.APP_TYPE == AppType.JIRA:
+            
+            if self.API.is_servicedesk_installed() and self.API.is_servicedesk_licensed():
+
+                jsd_version = self.API.calculate_service_desk_version(version)
+                self._print_msg("Jira Servicedesk is installed and licensed for use")
+                cves = get_cves(jira_sw_version=version, jira_sd_version=jsd_version)
+            else:
+                self._print_msg("Jira Servicedesk is not installed")
+                cves = get_cves(jira_sw_version=version)
+        else: 
+            cves = get_cves(confluence_version=version)
         vulnlen = len(cves)
 
         if vulnlen > 0:
@@ -791,6 +1075,44 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
 
         self.update_results("vulnerabilities", cves)
 
+    @JiraConfluenceOnly
+    @AuditInit
+    def get_server_info_unauthenticated(self):
+        meta = None
+
+        try:
+            meta = self.API.get_server_info()
+        except JiraRequestException as exce:
+            logging.error("Error while retrieving server info: root cause: %s", exce)
+            return None
+
+        version = meta[0]
+        last_update_date = meta[1]
+        server_title = meta[2]
+
+        self.update_results(
+            "serverInfo",
+            {
+                "serverTitle": server_title,
+                "version": version,
+                "lastUpdated": last_update_date,
+            },
+        )
+
+        self._print_header("INFO")
+        # self._print_header("_" * 27, "[INFO]", "_" * 27)
+        self._print_msg("")
+        self._print_msg(f"Jira Version:\t\t{Color.format(version, Color.CYAN)}")
+        self._print_msg(
+            f"Last Update Date:\t{Color.format(last_update_date, Color.CYAN)}"
+        )
+        self._print_msg(f"Server Title:\t\t{Color.format(server_title, Color.CYAN)}\n")
+
+        self._print_msg("")
+
+        return meta
+
+    @JiraConfluenceOnly
     @Authenticated
     @AuditInit
     def get_server_info(self) -> set:
@@ -806,7 +1128,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         meta = None
 
         try:
-            meta = self.JIRA_API.get_server_info()
+            meta = self.API.get_server_info()
         except JiraRequestException as exce:
             logging.error("Error while retrieving server info: root cause: %s", exce)
             return None
@@ -815,7 +1137,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         last_update_date = meta[1]
         server_title = meta[2]
 
-        users = self.JIRA_API.get_users()
+        users = self.API.get_users()
         active_users = users.get("activeUsers")
         inactive_users = users.get("inactiveUsers")
 
@@ -831,7 +1153,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
             "userInfo", {"activeUsers": active_users, "inactiveUsers": inactive_users}
         )
 
-        self._print_msg("_" * 27, "[INFO]", "_" * 27)
+        self._print_header("INFO")
         self._print_msg("")
         self._print_msg(f"Jira Version:\t\t{Color.format(version, Color.CYAN)}")
         self._print_msg(
@@ -848,6 +1170,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
 
         return meta
 
+    @JiraConfluenceOnly
     @Authenticated
     @AuditInit
     def full_audit_auth(self):
@@ -859,7 +1182,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         meta = self.get_server_info()
         version = meta[0]
         # get cves
-        self.check_cves(version)
+        self.check_cves()
 
         # enumerate plugins (authenticated)
         self.enum_plugins_authenticated(check_versions=True)
@@ -875,6 +1198,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         # print score
         print_score()
 
+    @JiraConfluenceOnly
     @AuditInit
     def full_audit_unauth(self):
         """
@@ -886,11 +1210,14 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         # version = meta[0]
         # get cves
         # self.check_cves(version)
+        self.enum_applinks_unauthenticated()
 
         self.enum_plugins_unauthenticated()
 
         self.check_exposed_sensitive_data()
 
+
+    @JiraConfluenceOnly
     @Authenticated
     @AuditInit
     def full_audit(self):
@@ -905,7 +1232,7 @@ class Auditor:  # pylint: disable=too-many-instance-attributes
         meta = self.get_server_info()
         version = meta[0]
         # get cves
-        self.check_cves(version)
+        self.check_cves()
 
         # enumerate plugins (authenticated)
         self.enum_plugins_authenticated(check_versions=True)
